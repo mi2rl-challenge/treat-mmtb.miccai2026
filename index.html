@@ -44,7 +44,7 @@ footer{text-align:center;padding:1.5rem 2rem;font-size:.78rem;color:var(--text-m
 <!---->
 <div style="display:flex;flex-direction:column;align-items:center;gap:.6rem;margin-bottom:2rem;font-size:.88rem">
 <div style="background:var(--primary-light);color:var(--primary);padding:.5rem 1.25rem;border-radius:8px;font-weight:600">
-Apr 10 &ndash; May 15, 2026 &mdash; Application for Participation Competition Phase
+Apr 10 &ndash; Jul 31, 2026 &mdash; Application for Participation
 </div>
 <div style="color:var(--text-muted)">
 May 15 &ndash; Aug 20, 2026 &mdash; (Internal &middot; External) Competition Phase
@@ -111,7 +111,7 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 </div>
 <div class="overview-grid">
 <div class="ov-card"><div class="icon">🧩</div><h3>Task 1: Cavity Detection & Segmentation</h3><p>Deep learning–based detection and segmentation of cavitary lesions from CXR, targeting high-risk indicators of TB severity and infectiousness.</p></div>
-<div class="ov-card"><div class="icon">🔬</div><h3>Task 2: Multimodal TB Diagnosis</h3><p>Timika score prediction through multimodal fusion of CXR imaging and clinical metadata for quantitative TB severity assessment.</p></div>
+<div class="ov-card"><div class="icon">🔬</div><h3>Task 2: Multimodal TB Diagnosis</h3><p>TB severity prediction through multimodal fusion of CXR imaging and clinical metadata for quantitative TB assessment.</p></div>
 <div class="ov-card"><div class="icon">🌍</div><h3>Multi-Center Validation</h3><p>External validation across 5 international sites — Korea, Mongolia, Peru, and the Philippines — ensuring clinical generalizability.</p></div>
 </div></div></section>
 
@@ -153,13 +153,13 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 </div>
 <div class="task-col">
 <span class="task-tag t2">Task 2</span>
-<h3>Multimodal Timika Score Prediction</h3>
+<h3>Multimodal TB Diagnosis</h3>
 
 <h4>Goal</h4>
-<p>Build a model that predicts the Timika score — a validated radiographic severity measure — by integrating frontal chest X-ray imaging with clinical metadata.</p>
+<p>Build a model that predicts TB severity by integrating frontal chest X-ray imaging with clinical metadata.</p>
 
 <h4>Why it matters</h4>
-<p>Accurate assessment of TB severity is fundamental to treatment planning and disease management, yet current practice relies heavily on subjective radiological interpretation. The Timika score provides a standardized, quantitative measure of disease extent, but its manual computation is time-consuming and prone to inter-observer variability. A multimodal AI framework that combines imaging features with clinical context — symptoms, demographics, bacterial load, medical history — can emulate the integrative reasoning of expert clinicians and improve diagnostic consistency across diverse healthcare settings.</p>
+<p>Accurate assessment of TB severity is fundamental to treatment planning and disease management, yet current practice relies heavily on subjective radiological interpretation. A standardized, quantitative measure of disease extent remains difficult to obtain manually and is prone to inter-observer variability. A multimodal AI framework that combines imaging features with clinical context — symptoms, demographics, bacterial load, medical history — can emulate the integrative reasoning of expert clinicians and improve diagnostic consistency across diverse healthcare settings.</p>
 
 <h4>What you need to solve</h4>
 <p>Participants must develop a multimodal prediction pipeline that takes two inputs simultaneously:</p>
@@ -167,12 +167,12 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 <li><strong>Imaging:</strong> frontal chest X-ray (AP/PA)</li>
 <li><strong>Clinical data:</strong> structured metadata including demographics, symptoms, sputum results, and medical history</li>
 </ul>
-<p>The model must accurately predict the Timika score for both TB-positive and normal cases. Your method should be robust to missing or incomplete clinical variables and generalizable across diverse patient populations.</p>
+<p>The model must accurately predict TB severity for both TB-positive and normal cases. Your method should be robust to missing or incomplete clinical variables and generalizable across diverse patient populations.</p>
 
 <h4>Expected output</h4>
 <p>For each case, submit:</p>
 <ul>
-<li>a predicted Timika score</li>
+<li>a predicted TB severity score</li>
 </ul>
 <p class="task-note">Detailed submission format specifications and clinical metadata schema will be provided upon dataset release on May 15, 2026.</p>
 
@@ -191,14 +191,14 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 <h3 style="font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;color:var(--heading);margin-bottom:1rem">Sample Images & Annotations</h3>
 <div class="curation-grid">
 <div class="curation-placeholder"><div class="ph-icon">🏷️</div><div class="ph-label">Task 1: CXR with Cavity Annotations</div><div class="ph-desc">Sample chest X-rays showing cavity detection<br>and segmentation masks</div></div>
-<div class="curation-placeholder"><div class="ph-icon">📊</div><div class="ph-label">Task 2: Multimodal Data Overview</div><div class="ph-desc">CXR samples paired with clinical metadata<br>and Timika score distributions</div></div>
+<div class="curation-placeholder"><div class="ph-icon">📊</div><div class="ph-label">Task 2: Multimodal Data Overview</div><div class="ph-desc">CXR samples paired with clinical metadata<br>and TB severity distributions</div></div>
 </div>
 
 <!-- Row 2: Data Distribution -->
 <h3 style="font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;color:var(--heading);margin-top:2.5rem;margin-bottom:1rem">Data Distribution</h3>
 <div class="curation-grid">
 <div class="curation-placeholder"><div class="ph-icon">📈</div><div class="ph-label">Task 1: Cavity Presence Distribution</div><div class="ph-desc">Class balance (positive vs. negative),<br>cavity size distribution, and location heatmap</div></div>
-<div class="curation-placeholder"><div class="ph-icon">📉</div><div class="ph-label">Task 2: Timika Score Distribution</div><div class="ph-desc">Timika score histogram, TB vs. Normal ratio,<br>and per-center data distribution</div></div>
+<div class="curation-placeholder"><div class="ph-icon">📉</div><div class="ph-label">Task 2: Severity Score Distribution</div><div class="ph-desc">Severity score histogram, TB vs. Normal ratio,<br>and per-center data distribution</div></div>
 </div>
 
 <!-- Row 3: Annotation Detail -->
@@ -217,7 +217,7 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 <h2 class="section-title">Schedule</h2>
 <div class="section-desc">All deadlines are based on Korea Standard Time (KST) unless otherwise noted.</div>
 <table class="sched-table"><thead><tr><th>Date</th><th>Event</th></tr></thead><tbody>
-<tr><td>Apr 10 – May 15, 2026</td><td>Application for Participation</td></tr>
+<tr><td>Apr 10 – July 31, 2026</td><td>Application for Participation</td></tr>
 <tr><td>May 15, 2026</td><td>Internal Dataset Release</td></tr>
 <tr class="phase-row"><td>May 15 – July 31, 2026</td><td>Internal Competition Phase</td></tr>
 <tr><td>July 31, 2026</td><td>Announcement of Qualified Teams for External Competition</td></tr>
@@ -278,6 +278,7 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 <ul>
 <li>Submit prediction result files</li>
 <li>Evaluated on internal validation set</li>
+<li>Submit a short method paper (approx. 4 pages) describing your approach</li>
 </ul>
 <p class="mt-1" style="font-size:.82rem;color:var(--text-muted)">Submission format and file structure will be provided upon dataset release on May 15, 2026.</p>
 </div>
@@ -304,7 +305,7 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 <div class="rule-item"><span class="rule-num">01</span><div><h4>Additional Data Policy</h4><p>Use of additional publicly available datasets and pre-trained models is permitted. Participants may leverage any open-source datasets, foundation models, or pre-trained weights to improve their methods. All data sources and models used must be fully disclosed in the Method Description. Failure to disclose will result in disqualification.</p></div></div>
 <div class="rule-item"><span class="rule-num">02</span><div><h4>Computational Constraints</h4><p>Participants are free to use any computational resources during training. However, submitted inference pipelines must run within the organizers' evaluation environment. Models that exceed available GPU memory or fail to complete inference within the allotted time limit will be considered invalid. Specific hardware specifications and time constraints will be announced upon dataset release.</p></div></div>
 <div class="rule-item"><span class="rule-num">03</span><div><h4>Anti-Cheating &amp; Reproducibility</h4><p>Top-ranking teams must submit full source code and trained model weights for verification. Any form of data leakage, test set probing, or result manipulation will result in immediate disqualification.</p></div></div>
-<div class="rule-item"><span class="rule-num">04</span><div><h4>Team &amp; Participation</h4><p>Teams or individuals may enter one or both tasks. Winning prizes in both tasks simultaneously is allowed. Each individual may belong to only one team per task. Participating in multiple teams within the same task is strictly prohibited. Team roster changes are permitted only once and must be finalized before the application deadline (May 15, 2026).</p></div></div>
+<div class="rule-item"><span class="rule-num">04</span><div><h4>Team &amp; Participation</h4><p>Teams or individuals may enter one or both tasks. Winning prizes in both tasks simultaneously is allowed. Each individual may belong to only one team per task. Participating in multiple teams within the same task is strictly prohibited. Team roster changes are permitted only once and must be finalized before the application deadline (July 31, 2026).</p></div></div>
 <div class="rule-item"><span class="rule-num">05</span><div><h4>Submission Limits</h4><p>2nd Stage: Up to two submissions per week. Submissions with Dockerfiles that fail to execute will be considered invalid.</p></div></div>
 <div class="rule-item"><span class="rule-num">06</span><div><h4>Data Policy</h4><p>The organizers will provide a subset of annotated cases for training and validation. The source images originate from publicly available repositories, which participants may independently access. However, the annotations and labels created by the organizers are proprietary to this challenge and must not be redistributed or made publicly available at any time, including after the competition concludes. All participants are required to sign a data security agreement upon registration.</p></div></div>
 <div class="rule-item"><span class="rule-num">07</span><div><h4>Independent Publication</h4><p>Participating teams may publish their results independently. Please cite the challenge paper when applicable.</p></div></div>
@@ -328,7 +329,7 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 
 </div>
 
-<div class="prize-task-header"><h3>Task 2: Multimodal Timika Score Prediction</h3></div>
+<div class="prize-task-header"><h3>Task 2: Multimodal TB Diagnosis</h3></div>
 <div class="prize-row">
 <div class="prize-card gold"><div class="rank">🥇</div><div class="amount">$1,400</div><div class="place">First Prize</div></div>
 <div class="prize-card silver"><div class="rank">🥈</div><div class="amount">$700</div><div class="place">Second Prize</div></div>
