@@ -39,7 +39,7 @@ footer{text-align:center;padding:1.5rem 2rem;font-size:.78rem;color:var(--text-m
 <h1>TREAT-MMTB 2026</h1>
 <p class="full-name">Transformative Research and Efficient AI Technologies<br>for Multimodal Management of Tuberculosis</p>
 <p class="hero-desc" style="font-size:1.1rem;font-weight:500;color:var(--heading);max-width:580px">
-    Segment cavities. Predict severity. Publish together.
+    Segment cavities. Classify TB. Publish together.
 </p>
 <!---->
 <div style="display:flex;flex-direction:column;align-items:center;gap:.6rem;margin-bottom:2rem;font-size:.88rem">
@@ -50,7 +50,8 @@ Apr 10 &ndash; Jul 31, 2026 &mdash; Application for Participation
 May 15 &ndash; Aug 20, 2026 &mdash; (Internal &middot; External) Competition Phase
 </div>
 <div style="color:var(--text-muted)">
-Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
+Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
+</div>
 </div>
 </div>
 
@@ -111,7 +112,7 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 </div>
 <div class="overview-grid">
 <div class="ov-card"><div class="icon">🧩</div><h3>Task 1: Cavity Detection & Segmentation</h3><p>Deep learning–based detection and segmentation of cavitary lesions from CXR, targeting high-risk indicators of TB severity and infectiousness.</p></div>
-<div class="ov-card"><div class="icon">🔬</div><h3>Task 2: Multimodal TB Diagnosis</h3><p>TB severity prediction through multimodal fusion of CXR imaging and clinical metadata for quantitative TB assessment.</p></div>
+<div class="ov-card"><div class="icon">🔬</div><h3>Task 2: Multimodal TB Diagnosis</h3><p>TB/Normal classification through multimodal fusion of CXR imaging and clinical metadata across multi-center international data.</p></div>
 <div class="ov-card"><div class="icon">🌍</div><h3>Multi-Center Validation</h3><p>External validation across 5 international sites — Korea, Mongolia, Peru, and the Philippines — ensuring clinical generalizability.</p></div>
 </div></div></section>
 
@@ -156,23 +157,23 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 <h3>Multimodal TB Diagnosis</h3>
 
 <h4>Goal</h4>
-<p>Build a model that predicts TB severity by integrating frontal chest X-ray imaging with clinical metadata.</p>
+<p>Build a model that classifies TB/Normal by integrating frontal chest X-ray imaging with clinical metadata.</p>
 
 <h4>Why it matters</h4>
-<p>Accurate assessment of TB severity is fundamental to treatment planning and disease management, yet current practice relies heavily on subjective radiological interpretation. A standardized, quantitative measure of disease extent remains difficult to obtain manually and is prone to inter-observer variability. A multimodal AI framework that combines imaging features with clinical context — symptoms, demographics, bacterial load, medical history — can emulate the integrative reasoning of expert clinicians and improve diagnostic consistency across diverse healthcare settings.</p>
+<p>Accurate classification of TB is fundamental to screening, treatment planning, and disease management, yet current practice relies heavily on subjective radiological interpretation. A standardized, quantitative measure of disease extent remains difficult to obtain manually and is prone to inter-observer variability. A multimodal AI framework that combines imaging features with clinical context — symptoms, demographics, bacterial load, medical history — can emulate the integrative reasoning of expert clinicians and improve diagnostic consistency across diverse healthcare settings.</p>
 
 <h4>What you need to solve</h4>
-<p>Participants must develop a multimodal prediction pipeline that takes two inputs simultaneously:</p>
+<p>Participants must develop a multimodal classification pipeline that takes two inputs simultaneously:</p>
 <ul>
 <li><strong>Imaging:</strong> frontal chest X-ray (AP/PA)</li>
 <li><strong>Clinical data:</strong> structured metadata including demographics, symptoms, sputum results, and medical history</li>
 </ul>
-<p>The model must accurately predict TB severity for both TB-positive and normal cases. Your method should be robust to missing or incomplete clinical variables and generalizable across diverse patient populations.</p>
+<p>The model must accurately classify TB-positive and normal cases. Your method should be robust to missing or incomplete clinical variables and generalizable across diverse patient populations.</p>
 
 <h4>Expected output</h4>
 <p>For each case, submit:</p>
 <ul>
-<li>a predicted TB severity score</li>
+<li>a predicted TB/Normal classification label</li>
 </ul>
 <p class="task-note">Detailed submission format specifications and clinical metadata schema will be provided upon dataset release on May 15, 2026.</p>
 
@@ -201,11 +202,11 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 <div class="curation-placeholder"><div class="ph-icon">📉</div><div class="ph-label">Task 2: Severity Score Distribution</div><div class="ph-desc">Severity score histogram, TB vs. Normal ratio,<br>and per-center data distribution</div></div>
 </div>
 
-<!-- Row 3: Annotation Detail -->
-<h3 style="font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;color:var(--heading);margin-top:2.5rem;margin-bottom:1rem">Annotation Details</h3>
-<div class="curation-grid" style="grid-template-columns:1fr">
-<div class="curation-placeholder" style="min-height:180px"><div class="ph-icon">🏷️</div><div class="ph-label">Labeling Protocol & Annotation Examples</div><div class="ph-desc">Annotation guidelines, label format specification, weak vs. strong label examples,<br>and inter-annotator agreement samples</div></div>
-</div>
+<!--&lt;!&ndash; Row 3: Annotation Detail &ndash;&gt;-->
+<!--<h3 style="font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;color:var(&#45;&#45;heading);margin-top:2.5rem;margin-bottom:1rem">Annotation Details</h3>-->
+<!--<div class="curation-grid" style="grid-template-columns:1fr">-->
+<!--<div class="curation-placeholder" style="min-height:180px"><div class="ph-icon">🏷️</div><div class="ph-label">Labeling Protocol & Annotation Examples</div><div class="ph-desc">Annotation guidelines, label format specification, weak vs. strong label examples,<br>and inter-annotator agreement samples</div></div>-->
+<!--</div>-->
 
 </div></section>
 
@@ -224,7 +225,7 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 <tr class="phase-row"><td>Aug 1 – Aug 20, 2026</td><td>External Competition Phase</td></tr>
 <tr><td>Aug 20 – Aug 31, 2026</td><td>Organizer Verification and Docker Evaluation</td></tr>
 <tr><td>September 1, 2026</td><td>Final Ranking Announcement and MICCAI Invitation</td></tr>
-<tr><td>October 4 & 8, 2026</td><td>Challenge at MICCAI 2026 and Award Ceremony</td></tr>
+<tr><td>September 27, 2026</td><td>Challenge at MICCAI 2026 and Award Ceremony</td></tr>
 <tr><td>November 1, 2026</td><td>Paper Submission Deadline</td></tr>
 </tbody></table>
 
@@ -269,16 +270,17 @@ Oct 4 &amp; 8, 2026 &mdash; MICCAI 2026 Awards, Abu Dhabi
 <div class="section-label">Evaluation</div>
 <h2 class="section-title">Evaluation & Submission</h2>
 <div class="eval-grid">
-<div class="eval-card"><div class="tag">Task 1 Metrics</div><h3>Cavity Segmentation</h3><div><span class="metric-tag">DSC</span> <span class="metric-tag">Accuracy</span></div><p class="mt-1">Evaluation is expected to be based on Dice Similarity Coefficient (DSC) for segmentation quality and Accuracy for cavity presence detection. The exact metrics, ranking formula, and evaluation scripts will be finalized and announced upon dataset release on May 15, 2026.</p></div>
-<div class="eval-card"><div class="tag">Task 2 Metrics</div><h3>Multimodal Diagnosis</h3><div><span class="metric-tag t2">F1-Score</span></div><p class="mt-1">Evaluation is expected to be based on F1-Score, balancing precision and recall to reflect clinical diagnostic requirements. Detailed scoring criteria and evaluation scripts will be finalized and announced upon dataset release on May 15, 2026.</p></div>
+<div class="eval-card"><div class="tag">Task 1 Metrics</div><h3>Cavity Segmentation</h3><div><span class="metric-tag">DSC</span> <span class="metric-tag">Accuracy</span></div><p class="mt-1">Evaluation is based on Dice Similarity Coefficient (DSC) for segmentation quality and Accuracy for cavity presence detection. </p></div>
+<div class="eval-card"><div class="tag">Task 2 Metrics</div><h3>Multimodal Diagnosis</h3><div><span class="metric-tag t2">F1-Score</span></div><p class="mt-1">Evaluation is based on F1-Score, balancing precision and recall to reflect clinical diagnostic requirements. </p></div>
 </div>
 <div class="eval-card" style="margin-top:1.25rem">
 <div class="tag">Phase 1 &mdash; Internal Competition</div>
-<h3>Prediction Submission</h3>
+<h3>Model Prediction Submission</h3>
 <ul>
-<li>Submit prediction result files</li>
+<li>Submit model prediction result files</li>
 <li>Evaluated on internal validation set</li>
 <li>Submit a short method paper (approx. 4 pages) describing your approach</li>
+<li>Submit model results as a CSV file for the provided test images.</li>
 </ul>
 <p class="mt-1" style="font-size:.82rem;color:var(--text-muted)">Submission format and file structure will be provided upon dataset release on May 15, 2026.</p>
 </div>
