@@ -189,18 +189,48 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <div class="section-desc">Overview of the challenge dataset, including sample images, annotation examples, and data distributions. Full data access is provided upon registration.</div>
 
 <!-- Row 1: Sample & Annotation (existing) -->
+<!-- 변경: 기존 .curation-placeholder(빈 박스) 두 개를 실제 이미지(resource/task1_sample.png, resource/task2_sample.png)로 교체.
+     라벨/설명 텍스트는 figcaption으로 유지하여 placeholder의 의미를 보존함. -->
 <h3 style="font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;color:var(--heading);margin-bottom:1rem">Sample Images & Annotations</h3>
+<!-- 카드 높이 통일을 위해:
+     1) figure 자체에 height:100% (grid 컬럼이 stretch 되도록)
+     2) 이미지 영역에 고정 aspect-ratio(4/3) + object-fit:contain 적용 — 원본 비율 보존하면서 두 카드의 이미지 박스 크기를 동일하게 맞춤
+     3) figcaption은 margin-top:auto 로 카드 하단에 정렬 → 캡션 길이가 달라도 전체 높이 동일 유지 -->
 <div class="curation-grid">
-<div class="curation-placeholder"><div class="ph-icon">🏷️</div><div class="ph-label">Task 1: CXR with Cavity Annotations</div><div class="ph-desc">Sample chest X-rays showing cavity detection<br>and segmentation masks</div></div>
-<div class="curation-placeholder"><div class="ph-icon">📊</div><div class="ph-label">Task 2: Multimodal Data Overview</div><div class="ph-desc">CXR samples paired with clinical metadata<br>and TB severity distributions</div></div>
+<figure style="margin:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;height:100%">
+    <img src="resource/task1_sample.png" alt="Task 1: CXR with Cavity Annotations" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--bg-alt);display:block">
+    <figcaption style="padding:.9rem 1.1rem;border-top:1px solid var(--border-light);margin-top:auto">
+        <div style="font-size:.88rem;font-weight:600;color:var(--heading);margin-bottom:.2rem">Task 1: CXR with Cavity Annotations</div>
+        <div style="font-size:.78rem;color:var(--text-muted);line-height:1.6">Sample chest X-rays showing cavity detection and segmentation masks. Pixel-level binary segmentation masks are provided alongside each CXR.</div>
+    </figcaption>
+</figure>
+<figure style="margin:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;height:100%">
+    <img src="resource/task2_sample.png" alt="Task 2: Multimodal Data Overview" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--bg-alt);display:block">
+    <figcaption style="padding:.9rem 1.1rem;border-top:1px solid var(--border-light);margin-top:auto">
+        <div style="font-size:.88rem;font-weight:600;color:var(--heading);margin-bottom:.2rem">Task 2: Multimodal Data Overview</div>
+        <div style="font-size:.78rem;color:var(--text-muted);line-height:1.6">CXR samples paired with clinical metadata and TB severity distributions. Accompanying clinical information is provided as a CSV file linked to each image.</div>
+    </figcaption>
+</figure>
 </div>
 
-<!-- Row 2: Data Distribution -->
+<!-- ============================================================================
+     ▼▼▼ [HIDDEN] Data Distribution (EDA) 섹션 — 추후 복구 가능 ▼▼▼
+     ----------------------------------------------------------------------------
+     사유: dataset release 시점에 보여줄 만한 EDA 자료(클래스 밸런스, cavity 크기/위치
+           분포, 센터별 분포 등)가 아직 준비되지 않아 placeholder 상태로 두면 오히려
+           감점 요인이 될 수 있어 임시로 숨김 처리함.
+     복구 방법: 아래 블록 주석(<!- - ... - ->)을 풀어서 다시 활성화하면 됨.
+     대안 위치: 정식 자료는 dataset release notes 또는 GitHub README의 EDA 노트북에
+                링크로 제공하는 것을 권장.
+     ============================================================================ -->
+<!--
 <h3 style="font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;color:var(--heading);margin-top:2.5rem;margin-bottom:1rem">Data Distribution</h3>
 <div class="curation-grid">
 <div class="curation-placeholder"><div class="ph-icon">📈</div><div class="ph-label">Task 1: Cavity Presence Distribution</div><div class="ph-desc">Class balance (positive vs. negative),<br>cavity size distribution, and location heatmap</div></div>
 <div class="curation-placeholder"><div class="ph-icon">📉</div><div class="ph-label">Task 2: Severity Score Distribution</div><div class="ph-desc">Severity score histogram, TB vs. Normal ratio,<br>and per-center data distribution</div></div>
 </div>
+-->
+<!-- ▲▲▲ [HIDDEN] Data Distribution (EDA) 섹션 끝 ▲▲▲ -->
 
 <!--&lt;!&ndash; Row 3: Annotation Detail &ndash;&gt;-->
 <!--<h3 style="font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;color:var(&#45;&#45;heading);margin-top:2.5rem;margin-bottom:1rem">Annotation Details</h3>-->
