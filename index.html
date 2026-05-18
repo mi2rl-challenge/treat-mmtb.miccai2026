@@ -47,7 +47,7 @@ footer{text-align:center;padding:1.5rem 2rem;font-size:.78rem;color:var(--text-m
 Apr 10 &ndash; Jul 31, 2026 &mdash; Application for Participation
 </div>
 <div style="color:var(--text-muted)">
-May 15 &ndash; Aug 20, 2026 &mdash; (Internal &middot; External) Competition Phase
+May 22 &ndash; Aug 20, 2026 &mdash; (Internal &middot; External) Competition Phase
 </div>
 <div style="color:var(--text-muted)">
 Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
@@ -80,7 +80,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <table class="pending-table">
 <thead><tr><th>What</th><th>When</th><th>Includes</th></tr></thead>
 <tbody>
-<tr><td>Dataset &amp; Evaluation Protocol</td><td>May 15, 2026</td><td>Training/validation data, submission format, clinical metadata schema, evaluation metrics, ranking formula, scoring scripts, hardware specs</td></tr>
+<tr><td>Dataset &amp; Evaluation Protocol</td><td>May 22, 2026</td><td>Training/validation data, submission format, clinical metadata schema, evaluation metrics, ranking formula, scoring scripts, hardware specs</td></tr>
 <tr><td>Docker Submission Environment</td><td>Before Aug 1, 2026</td><td>sample Dockerfile, submission template, execution guidelines</td></tr>
 </tbody>
 </table>
@@ -112,7 +112,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 </div>
 <div class="overview-grid">
 <div class="ov-card"><div class="icon">🧩</div><h3>Task 1: Cavity Detection & Segmentation</h3><p>Deep learning–based detection and segmentation of cavitary lesions from CXR, targeting high-risk indicators of TB severity and infectiousness.</p></div>
-<div class="ov-card"><div class="icon">🔬</div><h3>Task 2: Multimodal TB Diagnosis</h3><p>TB/Normal classification through multimodal fusion of CXR imaging and clinical metadata across multi-center international data.</p></div>
+<div class="ov-card"><div class="icon">🔬</div><h3>Task 2: TB Diagnosis</h3><p>TB/Normal classification through multimodal fusion of CXR imaging and clinical metadata across multi-center international data.</p></div>
 <div class="ov-card"><div class="icon">🌍</div><h3>Multi-Center Validation</h3><p>External validation across 5 international sites — Korea, Mongolia, Peru, and the Philippines — ensuring clinical generalizability.</p></div>
 </div></div></section>
 
@@ -148,13 +148,13 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <li>a cavity presence/absence prediction</li>
 <li>a cavity segmentation mask when applicable</li>
 </ul>
-<p class="task-note">Detailed submission format specifications (file naming, directory structure, mask format) will be provided upon dataset release on May 15, 2026.</p>
-<p class="task-note">Note: This challenge focuses on frontal CXRs (AP/PA) as they represent the primary imaging modality for TB screening in resource-limited settings. Lateral views are planned for future iterations (e.g., 2027).</p>
+<p class="task-note">Detailed submission format specifications (file naming, directory structure, mask format) will be provided upon dataset release on May 22, 2026.</p>
+<!--<p class="task-note">Note: This challenge focuses on frontal CXRs (AP/PA) as they represent the primary imaging modality for TB screening in resource-limited settings. Lateral views are planned for future iterations (e.g., 2027).</p>-->
 <!--<h4>Metrics</h4><div class="mt-1"><span class="metric-tag">DSC</span> <span class="metric-tag">Accuracy</span></div>-->
 </div>
 <div class="task-col">
 <span class="task-tag t2">Task 2</span>
-<h3>Multimodal TB Diagnosis</h3>
+<h3>TB Diagnosis</h3>
 
 <h4>Goal</h4>
 <p>Build a model that classifies TB/Normal by integrating frontal chest X-ray imaging with clinical metadata.</p>
@@ -166,7 +166,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <p>Participants must develop a multimodal classification pipeline that takes two inputs simultaneously:</p>
 <ul>
 <li><strong>Imaging:</strong> frontal chest X-ray (AP/PA)</li>
-<li><strong>Clinical data:</strong> structured metadata including demographics, symptoms, sputum results, and medical history</li>
+<li><strong>Clinical data:</strong> structured metadata including age, gender, and imaging modality</li>
 </ul>
 <p>The model must accurately classify TB-positive and normal cases. Your method should be robust to missing or incomplete clinical variables and generalizable across diverse patient populations.</p>
 
@@ -175,7 +175,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <ul>
 <li>a predicted TB/Normal classification label</li>
 </ul>
-<p class="task-note">Detailed submission format specifications and clinical metadata schema will be provided upon dataset release on May 15, 2026.</p>
+<p class="task-note">Detailed submission format specifications and clinical metadata schema will be provided upon dataset release on May 22, 2026.</p>
 
 <!--<h4>Metrics</h4><div class="mt-1"><span class="metric-tag t2">F1-Score</span></div>-->
 </div>
@@ -207,7 +207,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <figure style="margin:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;height:100%">
     <img src="resource/task2_sample.png" alt="Task 2: Multimodal Data Overview" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--bg-alt);display:block">
     <figcaption style="padding:.9rem 1.1rem;border-top:1px solid var(--border-light);margin-top:auto">
-        <div style="font-size:.88rem;font-weight:600;color:var(--heading);margin-bottom:.2rem">Task 2: Multimodal Data Overview</div>
+        <div style="font-size:.88rem;font-weight:600;color:var(--heading);margin-bottom:.2rem">Task 2: TB Diagnosis Data Overview</div>
         <div style="font-size:.78rem;color:var(--text-muted);line-height:1.6">CXR samples paired with clinical metadata and TB severity distributions. Accompanying clinical information is provided as a CSV file linked to each image.</div>
     </figcaption>
 </figure>
@@ -249,8 +249,8 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <div class="section-desc">All deadlines are based on Korea Standard Time (KST) unless otherwise noted.</div>
 <table class="sched-table"><thead><tr><th>Date</th><th>Event</th></tr></thead><tbody>
 <tr><td>Apr 10 – July 31, 2026</td><td>Application for Participation</td></tr>
-<tr><td>May 15, 2026</td><td>Internal Dataset Release</td></tr>
-<tr class="phase-row"><td>May 15 – July 31, 2026</td><td>Internal Competition Phase</td></tr>
+<tr><td>May 22, 2026</td><td>Internal Dataset Release</td></tr>
+<tr class="phase-row"><td>May 22 – July 31, 2026</td><td>Internal Competition Phase</td></tr>
 <tr><td>July 31, 2026</td><td>Announcement of Qualified Teams for External Competition</td></tr>
 <tr class="phase-row"><td>Aug 1 – Aug 20, 2026</td><td>External Competition Phase</td></tr>
 <tr><td>Aug 20 – Aug 31, 2026</td><td>Organizer Verification and Docker Evaluation</td></tr>
@@ -301,7 +301,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <h2 class="section-title">Evaluation & Submission</h2>
 <div class="eval-grid">
 <div class="eval-card"><div class="tag">Task 1 Metrics</div><h3>Cavity Segmentation</h3><div><span class="metric-tag">DSC</span> <span class="metric-tag">Accuracy</span></div><p class="mt-1">Evaluation is based on Dice Similarity Coefficient (DSC) for segmentation quality and Accuracy for cavity presence detection. </p></div>
-<div class="eval-card"><div class="tag">Task 2 Metrics</div><h3>Multimodal Diagnosis</h3><div><span class="metric-tag t2">F1-Score</span></div><p class="mt-1">Evaluation is based on F1-Score, balancing precision and recall to reflect clinical diagnostic requirements. </p></div>
+<div class="eval-card"><div class="tag">Task 2 Metrics</div><h3>TB Diagnosis</h3><div><span class="metric-tag t2">F1-Score</span></div><p class="mt-1">Evaluation is based on F1-Score, balancing precision and recall to reflect clinical diagnostic requirements. </p></div>
 </div>
 <div class="eval-card" style="margin-top:1.25rem">
 <div class="tag">Phase 1 &mdash; Internal Competition</div>
@@ -312,7 +312,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <li>Submit a short method paper (approx. 4 pages) describing your approach</li>
 <li>Submit model results as a CSV file for the provided test images.</li>
 </ul>
-<p class="mt-1" style="font-size:.82rem;color:var(--text-muted)">Submission format and file structure will be provided upon dataset release on May 15, 2026.</p>
+<p class="mt-1" style="font-size:.82rem;color:var(--text-muted)">Submission format and file structure will be provided upon dataset release on May 22, 2026.</p>
 </div>
 <div class="eval-card" style="margin-top:1.25rem">
 <div class="tag">Phase 2 &mdash; External Competition</div>
@@ -361,7 +361,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 
 </div>
 
-<div class="prize-task-header"><h3>Task 2: Multimodal TB Diagnosis</h3></div>
+<div class="prize-task-header"><h3>Task 2: TB Diagnosis</h3></div>
 <div class="prize-row">
 <div class="prize-card gold"><div class="rank">🥇</div><div class="amount">$1,400</div><div class="place">First Prize</div></div>
 <div class="prize-card silver"><div class="rank">🥈</div><div class="amount">$700</div><div class="place">Second Prize</div></div>
