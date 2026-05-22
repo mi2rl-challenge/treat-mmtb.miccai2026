@@ -129,7 +129,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <h3>Cavity Detection and Segmentation</h3>
 
 <h4>Goal</h4>
-<p>Build a model that determines whether a cavitary lesion is present on a frontal chest X-ray and segments the lesion when present.</p>
+<p>Build a model that determines whether a cavitary lesion is present on a frontal chest X-ray and segments the lesion when present..</p>
 
 <h4>Why it matters</h4>
 <p>Cavities are a key imaging marker of pulmonary tuberculosis severity and are strongly associated with bacterial burden, transmission risk, and treatment outcome. Automated cavity analysis can support more standardized and scalable TB assessment.</p>
@@ -137,16 +137,16 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <h4>What you need to solve</h4>
 <p>Participants must address two linked tasks:</p>
 <ul>
-<li><strong>Detection:</strong> decide whether a cavity is present or absent on the input CXR</li>
-<li><strong>Segmentation:</strong> if present, delineate the cavity boundary accurately</li>
+<li><strong>Detection:</strong> Decide whether a cavity is present or absent on the input CXR.</li>
+<li><strong>Segmentation:</strong> If present, delineate the cavity boundary accurately.</li>
 </ul>
 <p>Your method should be robust to variation in lesion appearance, size, location, and image quality.</p>
 
 <h4>Expected output</h4>
-<p>For each test image, submit:</p>
+<p>For your final submission, please provide:</p>
 <ul>
-<li>a cavity presence/absence prediction</li>
-<li>a cavity segmentation mask when applicable</li>
+<li>test.csv: The provided test.csv file, updated to include your cavity presence/absence predictions (0 for absent, 1 for present) for each test image.</li>
+<li>Segmentation Masks: Individual mask files delineating the cavity boundaries for the corresponding images.</li>
 </ul>
 <p class="task-note">Detailed submission format specifications (file naming, directory structure, mask format) will be provided upon dataset release on May 22, 2026.</p>
 <!--<p class="task-note">Note: This challenge focuses on frontal CXRs (AP/PA) as they represent the primary imaging modality for TB screening in resource-limited settings. Lateral views are planned for future iterations (e.g., 2027).</p>-->
@@ -171,9 +171,9 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <p>The model must accurately classify TB-positive and normal cases. Your method should be robust to missing or incomplete clinical variables and generalizable across diverse patient populations.</p>
 
 <h4>Expected output</h4>
-<p>For each case, submit:</p>
+<p>For your final submission, please provide:</p>
 <ul>
-<li>a predicted TB/Normal classification label</li>
+<li>test.csv: Predicted TB/Normal Classification label for each test image.</li>
 </ul>
 <p class="task-note">Detailed submission format specifications and clinical metadata schema will be provided upon dataset release on May 22, 2026.</p>
 
