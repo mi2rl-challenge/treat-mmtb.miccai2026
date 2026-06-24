@@ -1,0 +1,15 @@
+# --- Core I/O & image handling ----------------------------------------------
+numpy>=1.24,<2.0
+SimpleITK>=2.3.0
+pydicom>=2.4.0
+scipy>=1.10.0
+scikit-image>=0.21.0
+tqdm>=4.65.0
+
+# --- Deep learning framework (example — uncomment and adjust to your model) --
+# The CUDA build must match the base image (cu118).
+# Install torch with the matching wheel index, e.g.:
+#   pip install torch==2.1.0 --index-url https://download.pytorch.org/whl/cu118
+#
+# torch==2.1.0
+# nnunetv2>=2.2

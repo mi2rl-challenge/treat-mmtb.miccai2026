@@ -1,0 +1,5 @@
+# torch / torchvision are installed in the Dockerfile (CUDA 11.8 build).
+# Add any other dependencies your model needs below.
+numpy>=1.24,<2.0
+pillow>=10.0.0
+tqdm>=4.65.0

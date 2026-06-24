@@ -1,0 +1,53 @@
+# =============================================================================
+# TREAT-MMTB 2026 — Task 2 submission image (participant side)
+# Python 3.10 / CUDA 11.8 / cuDNN 8
+#
+# Runs INFERENCE ONLY and writes /output/prediction.csv.
+# Build it, save it to a tar, and submit the tar (see commands at the bottom).
+# =============================================================================
+FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
+# --- System dependencies ----------------------------------------------------
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        python3.10 \
+        python3-pip \
+        python3.10-dev \
+    && ln -sf /usr/bin/python3.10 /usr/bin/python \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+# --- PyTorch (CUDA 11.8 build, matching the base image) ---------------------
+# Adjust versions to what your model was trained with.
+RUN python -m pip install --no-cache-dir --upgrade pip \
+    && python -m pip install --no-cache-dir \
+        torch==2.1.0 torchvision==0.16.0 \
+        --index-url https://download.pytorch.org/whl/cu118
+
+# --- Other Python dependencies (edit requirements.txt for your model) -------
+COPY requirements.txt .
+RUN python -m pip install --no-cache-dir -r requirements.txt
+
+# --- Code + weights (bake your weights into the image) ----------------------
+# Put your trained weights under ./weights/ so they are copied here.
+COPY . .
+
+# Fixed entrypoint and I/O paths. Do NOT change /input or /output.
+ENTRYPOINT ["python", "predict.py", "--input", "/input", "--output", "/output"]
+
+# -----------------------------------------------------------------------------
+# Build, test, and submit:
+#
+#   docker build -t <team>-task2:latest .
+#
+#   docker run --rm --gpus all --network none \
+#       -v /path/to/sample_test:/input:ro \
+#       -v $PWD/sample_out:/output \
+#       <team>-task2:latest
+#
+#   docker save <team>-task2:latest | gzip > <team>-task2.tar.gz
+# -----------------------------------------------------------------------------
