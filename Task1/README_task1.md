@@ -1,81 +1,100 @@
 # TREAT-MMTB 2026 — Task 1 Submission (Docker image)
 
-You build a self-contained Docker image that runs **inference only** and writes
-predicted masks. You then **submit the image** (as a tar). The organizers run it
-on the held-out test set and score the outputs against the ground truth.
+You build a self-contained Docker image that runs **inference only** for X-ray cavity segmentation. The organizers will run your image on the held-out test set and score the outputs against the private ground truth.
 
 ## What you submit
 
-- A Docker image saved as a tar: `<team>-task1.tar.gz`
-  (your `predict.py`, `requirements.txt`, and **weights are all baked inside**).
-
-You do **not** submit code or weights separately, and you do **not** receive the
-ground truth.
+- A Docker image saved as a tar archive: `<team>-task1.tar.gz`
+- Your `predict.py`, `requirements.txt`, model code, and **weights must be baked inside the image**.
+- You do **not** submit code or weights separately.
+- You do **not** receive the ground truth.
 
 ## Files in this template
 
 | File | Edit? | Role |
 |------|-------|------|
-| `Dockerfile` | rarely | Python 3.10 / CUDA 11.8 environment, fixed entrypoint |
-| `requirements.txt` | **yes** | add your model's dependencies |
-| `predict.py` | **yes** | fill in `load_model()` and `Model.predict()` (returns mask + cavity flag) |
-| `weights/` | **yes** | put your trained weights here (e.g. `model.pth`) |
+| `Dockerfile` | rarely | Python 3.10 / CUDA 11.8 environment with fixed entrypoint |
+| `requirements.txt` | yes | Add your model dependencies |
+| `predict.py` | yes | Fill in `load_model()` and `Model.predict()` |
+| `weights/` | yes | Put your trained weights here, for example `weights/model.pth` |
 
-## I/O contract (fixed — do not change paths)
+## I/O contract: fixed paths
 
-Input (mounted at `/input`, read-only), one folder per patient, **CT only**:
+Input is mounted at `/input` as read-only. Each case is one folder containing X-ray DICOM file(s):
 
-```
+```text
 /input/
     <our_id>/
-        *.dcm        # CT series (one folder = one 3D volume)
+        *.dcm
 ```
 
-Input folders are named by `our_id` (the patient id).
+Output must be written to `/output`:
 
-Output (written to `/output`):
-
-```
+```text
 /output/
-    <our_id>.nii.gz    # predicted BINARY mask (0/1, uint8), same grid as the CT.
-                       # Write one for EVERY patient (empty mask if no cavity).
-    prediction.csv     # columns: our_id,cavity   (cavity: 1=present, 0=absent)
+    <our_id>.nii.gz    # predicted binary cavity mask, 0/1, uint8
+                       # same image grid as the input X-ray DICOM
+                       # write one mask for every case, including empty masks
+    prediction.csv     # columns: our_id,cavity
+                       # cavity: 1=present, 0=absent
 ```
 
-- Mask filename **must** be `<our_id>.nii.gz` (the input folder name), and the
-  `our_id` in `prediction.csv` must match it.
-- **Detection** is scored from `prediction.csv`; **DSC** is scored from the masks.
-  Keep the two consistent.
-- If you resample during inference, resample the prediction **back** to the
-  original CT grid before saving (`resample_to_reference` in `predict.py`).
+Rules:
 
-## Rules
+- The mask filename must be `<our_id>.nii.gz`, where `<our_id>` is the input folder name.
+- The `our_id` values in `prediction.csv` must exactly match the input folder names.
+- Detection is scored from `prediction.csv`.
+- Dice similarity coefficient is scored from the `.nii.gz` masks.
+- Keep the CSV and mask predictions consistent.
+- If you resize, crop, pad, or resample during inference, convert the final mask back to the original X-ray DICOM image grid before saving.
 
-- **Weights baked in.** The container runs offline (`--network none`); it cannot
-  download anything at run time.
-- **Inference only.** No ground truth is provided and no scoring happens inside
-  the container.
-- **GPU.** Test your image with `--gpus all`.
+## Runtime rules
 
-## Build, test, submit
+- The container runs offline with `--network none`; it cannot download model weights, packages, or checkpoints at runtime.
+- Ground truth is not provided inside the container.
+- Scoring does not run inside the participant container.
+- The image should run with GPU using `--gpus all`.
+
+## Build, test, and submit
 
 ```bash
-# 1. build
+# 1. Build
 docker build -t <team>-task1:latest .
 
-# 2. self-test on a few sample patients (CT only)
+# 2. Self-test on sample X-ray cases
 mkdir -p sample_out
 docker run --rm --gpus all --network none \
-    -v /path/to/sample_test:/input:ro \
+    -v /path/to/sample_xray_cases:/input:ro \
     -v $PWD/sample_out:/output \
     <team>-task1:latest
 
-# 3. save the image and submit the tar
+# 3. Save the image and submit the tar
 docker save <team>-task1:latest | gzip > <team>-task1.tar.gz
 ```
 
-## Scoring (organizer side)
+## Expected output check
 
+After a successful self-test, `/output` should contain:
+
+```text
+prediction.csv
+<our_id_1>.nii.gz
+<our_id_2>.nii.gz
+...
 ```
+
+`prediction.csv` should look like:
+
+```csv
+our_id,cavity
+case001,1
+case002,0
+```
+
+## Scoring
+
+Organizer-side scoring:
+
+```text
 final_score = 0.7 × patient-level cavity detection accuracy + 0.3 × DSC
 ```

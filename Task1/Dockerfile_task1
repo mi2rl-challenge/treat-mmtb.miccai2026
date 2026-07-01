@@ -22,9 +22,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /workspace
 
 # --- Python dependencies (edit requirements.txt for your model) -------------
-COPY requirements.txt .
-RUN python -m pip install --no-cache-dir --upgrade pip \
-    && python -m pip install --no-cache-dir -r requirements.txt
+COPY requirements_task1.txt .
+RUN python -m pip install --no-cache-dir --upgrade pip
+
+RUN python -m pip install --no-cache-dir torch==2.1.0 --index-url https://download.pytorch.org/whl/cu118
+RUN python -m pip install --no-cache-dir -r requirements_task1.txt
 
 # --- Code + weights (bake your weights into the image) ----------------------
 # Put your trained weights under ./weights/ so they are copied here.
@@ -32,7 +34,7 @@ RUN python -m pip install --no-cache-dir --upgrade pip \
 COPY . .
 
 # Fixed entrypoint and I/O paths. Do NOT change /input or /output.
-ENTRYPOINT ["python", "predict.py", "--input", "/input", "--output", "/output"]
+ENTRYPOINT ["python", "predict_task1.py", "--input", "/input", "--output", "/output"]
 
 # -----------------------------------------------------------------------------
 # Build, test, and submit:
