@@ -28,16 +28,16 @@ RUN python -m pip install --no-cache-dir --upgrade pip \
         torch==2.1.0 torchvision==0.16.0 \
         --index-url https://download.pytorch.org/whl/cu118
 
-# --- Other Python dependencies (edit requirements.txt for your model) -------
-COPY requirements.txt .
-RUN python -m pip install --no-cache-dir -r requirements.txt
+# --- Other Python dependencies (edit requirements_task2.txt for your model) -------
+COPY requirements_task2.txt .
+RUN python -m pip install --no-cache-dir -r requirements_task2.txt
 
 # --- Code + weights (bake your weights into the image) ----------------------
 # Put your trained weights under ./weights/ so they are copied here.
 COPY . .
 
 # Fixed entrypoint and I/O paths. Do NOT change /input or /output.
-ENTRYPOINT ["python", "predict.py", "--input", "/input", "--output", "/output"]
+ENTRYPOINT ["python", "predict_task2.py", "--input", "/input", "--output", "/output"]
 
 # -----------------------------------------------------------------------------
 # Build, test, and submit:
