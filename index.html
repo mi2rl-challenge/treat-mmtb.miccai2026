@@ -85,10 +85,10 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <div class="section-label">Ranking</div>
 <h2 class="section-title">Leaderboard</h2>
 <div class="section-desc">Internal validation results received so far. Rankings are ordered by Final Score and will be updated as new submissions arrive.</div>
-<p class="lb-updated">Last updated: July 20, 2026 &middot; updated daily during the internal phase</p>
+<p class="lb-updated">Last updated: July 22, 2026 &middot; updated daily during the internal phase</p>
 
 <h3 style="font-size:.95rem;font-weight:600;color:var(--primary);margin-top:2rem;margin-bottom:.5rem">Task 1. Cavity Detection and Segmentation</h3>
-<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>Final Score</th></tr></thead><tbody>
+<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>Final Score</th></tr></thead><tbody id="lb-task1">
 <tr><td>1</td><td>Akimasa Urakami</td><td>0.7784</td></tr>
 <tr><td>2</td><td>Glee Lab</td><td>0.7559</td></tr>
 <tr><td>3</td><td>BCN-AIM</td><td>0.7154</td></tr>
@@ -96,11 +96,12 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 </tbody></table>
 
 <h3 style="font-size:.95rem;font-weight:600;color:var(--primary);margin-top:2.5rem;margin-bottom:.5rem">Task 2. TB Diagnosis</h3>
-<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>Final Score</th></tr></thead><tbody>
-<tr><td>1</td><td>BCN-AIM</td><td>0.9995</td></tr>
-<tr><td>2</td><td>Odyssey</td><td>0.9989</td></tr>
-<tr><td>3</td><td>Akimasa Urakami</td><td>0.9973</td></tr>
-<tr><td>4</td><td>Glee Lab</td><td>0.9880</td></tr>
+<p style="font-size:.84rem;color:var(--text-secondary);margin-bottom:.6rem">Task 2 rankings are determined <strong>solely by the Final Score on the internal validation set</strong>. The <strong>External Subset</strong> column reports an additional evaluation of each team's submission on an external subset; it is provided <strong>for reference only</strong> and does not affect the Final Score or the ranking.</p>
+<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>Final Score</th><th>External Subset</th></tr></thead><tbody id="lb-task2">
+<tr><td>1</td><td>BCN-AIM</td><td>0.9995</td><td>-</td></tr>
+<tr><td>2</td><td>Odyssey</td><td>0.9989</td><td>-</td></tr>
+<tr><td>3</td><td>Akimasa Urakami</td><td>0.9973</td><td>-</td></tr>
+<tr><td>4</td><td>Glee Lab</td><td>0.9880</td><td>-</td></tr>
 </tbody></table>
 </div></section>
 
@@ -113,7 +114,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <div class="section-desc">Updates and frequently asked questions for participants during the competition. This section will be updated as the challenge progresses, so please check back regularly.</div>
 <div class="ann-meta">
 <span class="ann-pill">Latest</span>
-<span class="ann-date">Updated Jun 24, 2026</span>
+<span class="ann-date">Updated July 22, 2026</span>
 </div>
 <div class="ann-list">
 
@@ -144,7 +145,9 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <li><strong>Internal validation results</strong> &mdash; computed on the provided internal validation set using the evaluation script (<code>evaluate_task1.py</code> / <code>evaluate_task2.py</code>).</li>
 <li><strong>Method paper</strong> &mdash; LNCS format, no more than 4 pages (you may include results).</li>
 <li><strong>Dockerfile</strong> &mdash; following the format and template available on GitHub.</li>
+<li><strong>Docker image</strong> &mdash; the built image itself, either as a <code>docker save</code> archive (<code>.tar</code> / <code>.tar.gz</code>) shared via a download link, or as a public registry reference (e.g. Docker Hub) with the exact image name and tag.</li>
 </ul>
+<p style="margin-bottom:.4rem"><strong>Please note:</strong> we have received several submissions containing <strong>only a Dockerfile, without the corresponding Docker image</strong>. The Dockerfile alone is not sufficient &mdash; the organizers run your <em>image</em> directly for evaluation. Your submission is complete only when <strong>both the Dockerfile and the built image</strong> are provided, with model weights and all dependencies already included in the image so that it runs without network access.</p>
 <p>You may submit multiple times before the deadline. Only your most recent submission will be counted.</p>
 </div>
 
@@ -560,5 +563,48 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 </div></section>
 
 <footer>&copy; 2026 TREAT-MMTB Challenge &middot; Organized by Asan Medical Center &middot; All rights reserved</footer>
+
+<!-- 리더보드: leader_board_point.json 이 로드되면 위 표를 덮어씁니다.
+     JSON 은 page/rander_json_paser/xlsx2json_paser.py 로 엑셀에서 생성합니다.
+     로드에 실패하면 HTML 에 남아 있는 직전 순위가 그대로 보입니다. -->
+<script>
+(function () {
+  function score(value) {
+    return value === null || value === undefined || value === '' ? '-' : Number(value).toFixed(4);
+  }
+
+  // withExternal: Task 2 는 Final Score 우측에 External Subset 열이 하나 더 있습니다.
+  function render(tbody, rows, withExternal) {
+    if (!tbody || !Array.isArray(rows) || rows.length === 0) return;
+    var frag = document.createDocumentFragment();
+    rows.forEach(function (row) {
+      var tr = document.createElement('tr');
+      var cells = [row.rank, row.team, score(row.score)];
+      if (withExternal) cells.push(score(row.external));
+      cells.forEach(function (value) {
+        var td = document.createElement('td');
+        td.textContent = value;          // 팀명은 textContent 로만 삽입
+        tr.appendChild(td);
+      });
+      frag.appendChild(tr);
+    });
+    tbody.replaceChildren(frag);
+  }
+
+  // 쿼리스트링으로 캐시 우회 (푸시 직후에도 최신 순위가 보이도록)
+  fetch('leader_board_point.json?v=' + Date.now(), { cache: 'no-store' })
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      render(document.getElementById('lb-task1'), data.task1, false);
+      render(document.getElementById('lb-task2'), data.task2, true);
+    })
+    .catch(function (err) {
+      console.warn('Leaderboard JSON not loaded, keeping static table:', err);
+    });
+})();
+</script>
 
 <!--<script data-cfasync="f-->

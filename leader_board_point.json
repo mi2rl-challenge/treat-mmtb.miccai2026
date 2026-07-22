@@ -1,0 +1,67 @@
+{
+  "task1": [
+    {
+      "team": "HealCoder",
+      "score": 0.8033,
+      "rank": 1
+    },
+    {
+      "team": "FOCUS",
+      "score": 0.7823,
+      "rank": 2
+    },
+    {
+      "team": "Akimasa Urakami",
+      "score": 0.7784,
+      "rank": 3
+    },
+    {
+      "team": "Glee Lab",
+      "score": 0.7734,
+      "rank": 4
+    },
+    {
+      "team": "dukju kim",
+      "score": 0.7356,
+      "rank": 5
+    }
+  ],
+  "task2": [
+    {
+      "team": "HealCoder",
+      "score": 1.0,
+      "external": null,
+      "rank": 1
+    },
+    {
+      "team": "FOCUS",
+      "score": 1.0,
+      "external": null,
+      "rank": 1
+    },
+    {
+      "team": "GenMI",
+      "score": 0.9995,
+      "external": null,
+      "rank": 3
+    },
+    {
+      "team": "Odyssey",
+      "score": 0.9989,
+      "external": null,
+      "rank": 4
+    },
+    {
+      "team": "Akimasa Urakami",
+      "score": 0.9973,
+      "external": null,
+      "rank": 5
+    },
+    {
+      "team": "Glee Lab",
+      "score": 0.988,
+      "external": null,
+      "rank": 6
+    }
+  ]
+}
