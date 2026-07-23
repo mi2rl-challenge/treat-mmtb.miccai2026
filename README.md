@@ -17,17 +17,17 @@ Each task includes a baseline notebook with preprocessing, model training, and e
 
 ## Timeline
 
-| Date | Event                                 |
-|------|---------------------------------------|
+| Date                  | Event                                 |
+|-----------------------|---------------------------------------|
 | Apr 10 – Jul 31, 2026 | Application for Participation         |
-| May 22, 2026 | Internal Dataset Release              |
-| May 22 – Jul 31, 2026 | Internal Competition                  |
-| Jul 31, 2026 | Qualified Teams Announcement          |
-| Aug 1 – Aug 20, 2026 | External Competition                  |
+| May 22, 2026          | Internal Dataset Release              |
+| May 22 – Jul 24, 2026  | Internal Competition                  |
+| Jul 31, 2026          | Qualified Teams Announcement          |
+| Aug 1 – Aug 20, 2026  | External Competition                  |
 | Aug 20 – Aug 31, 2026 | Docker Evaluation                     |
-| Sep 1, 2026 | Final Ranking & MICCAI Invitation     |
-| Sep 27, 2026 | MICCAI 2026 Award, Strasbourg, France |
-| Nov 1, 2026 | Paper Submission Deadline             |
+| Sep 1, 2026           | Final Ranking & MICCAI Invitation     |
+| Sep 27, 2026          | MICCAI 2026 Award, Strasbourg, France |
+| Nov 1, 2026           | Paper Submission Deadline             |
 
 ## Prizes
 
