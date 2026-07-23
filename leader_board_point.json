@@ -2,31 +2,52 @@
   "task1": [
     {
       "team": "HealCoder",
-      "score": 0.8033,
+      "score": 0.8503,
       "rank": 1
+    },
+    {
+      "team": "임예제",
+      "score": 0.8033,
+      "rank": 2
     },
     {
       "team": "FOCUS",
       "score": 0.7823,
-      "rank": 2
+      "rank": 3
     },
     {
       "team": "Akimasa Urakami",
       "score": 0.7784,
-      "rank": 3
+      "rank": 4
     },
     {
       "team": "Glee Lab",
       "score": 0.7734,
-      "rank": 4
+      "rank": 5
+    },
+    {
+      "team": "TBVisionAI",
+      "score": 0.7568,
+      "rank": 6
     },
     {
       "team": "dukju kim",
       "score": 0.7356,
-      "rank": 5
+      "rank": 7
+    },
+    {
+      "team": "BCN-AIM",
+      "score": 0.7154,
+      "rank": 8
     }
   ],
   "task2": [
+    {
+      "team": "임예제",
+      "score": 1.0,
+      "external": null,
+      "rank": 1
+    },
     {
       "team": "HealCoder",
       "score": 1.0,
@@ -40,28 +61,46 @@
       "rank": 1
     },
     {
+      "team": "Akimasa Urakami",
+      "score": 1.0,
+      "external": null,
+      "rank": 1
+    },
+    {
+      "team": "BCN-AIM",
+      "score": 0.9995,
+      "external": null,
+      "rank": 5
+    },
+    {
       "team": "GenMI",
       "score": 0.9995,
       "external": null,
-      "rank": 3
+      "rank": 5
     },
     {
       "team": "Odyssey",
       "score": 0.9989,
       "external": null,
-      "rank": 4
+      "rank": 7
     },
     {
-      "team": "Akimasa Urakami",
-      "score": 0.9973,
+      "team": "KANGSUNG LEE",
+      "score": 0.9986,
       "external": null,
-      "rank": 5
+      "rank": 8
+    },
+    {
+      "team": "TBVisionAI",
+      "score": 0.9978,
+      "external": null,
+      "rank": 9
     },
     {
       "team": "Glee Lab",
       "score": 0.988,
       "external": null,
-      "rank": 6
+      "rank": 10
     }
   ]
 }
