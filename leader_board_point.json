@@ -1,53 +1,77 @@
 {
   "task1": [
     {
-      "team": "HealCoder",
-      "score": 0.8503,
+      "team": "Seonyu Park",
+      "score": 0.9025,
       "rank": 1
     },
     {
-      "team": "임예제",
-      "score": 0.8033,
+      "team": "HealCoder",
+      "score": 0.8503,
       "rank": 2
     },
     {
       "team": "FOCUS",
-      "score": 0.7823,
+      "score": 0.8133,
       "rank": 3
     },
     {
-      "team": "Akimasa Urakami",
-      "score": 0.7784,
+      "team": "MultimodalAI",
+      "score": 0.7932,
       "rank": 4
     },
     {
       "team": "Glee Lab",
-      "score": 0.7734,
+      "score": 0.784,
       "rank": 5
+    },
+    {
+      "team": "Akimasa Urakami",
+      "score": 0.7784,
+      "rank": 6
     },
     {
       "team": "TBVisionAI",
       "score": 0.7568,
-      "rank": 6
+      "rank": 7
+    },
+    {
+      "team": "Limitless",
+      "score": 0.7387,
+      "rank": 8
     },
     {
       "team": "dukju kim",
       "score": 0.7356,
-      "rank": 7
+      "rank": 9
+    },
+    {
+      "team": "Preceptor AI",
+      "score": 0.7251,
+      "rank": 10
     },
     {
       "team": "BCN-AIM",
       "score": 0.7154,
-      "rank": 8
+      "rank": 11
+    },
+    {
+      "team": "UniHD",
+      "score": 0.7074,
+      "rank": 12
+    },
+    {
+      "team": "TBITers",
+      "score": 0.6803,
+      "rank": 13
+    },
+    {
+      "team": "ECLAB",
+      "score": 0.6231,
+      "rank": 14
     }
   ],
   "task2": [
-    {
-      "team": "임예제",
-      "score": 1.0,
-      "external": null,
-      "rank": 1
-    },
     {
       "team": "HealCoder",
       "score": 1.0,
@@ -62,6 +86,18 @@
     },
     {
       "team": "Akimasa Urakami",
+      "score": 1.0,
+      "external": null,
+      "rank": 1
+    },
+    {
+      "team": "MultimodalAI",
+      "score": 1.0,
+      "external": null,
+      "rank": 1
+    },
+    {
+      "team": "Big Hero 2",
       "score": 1.0,
       "external": null,
       "rank": 1
@@ -70,37 +106,73 @@
       "team": "BCN-AIM",
       "score": 0.9995,
       "external": null,
-      "rank": 5
+      "rank": 6
+    },
+    {
+      "team": "Seonyu Park",
+      "score": 0.9995,
+      "external": null,
+      "rank": 6
+    },
+    {
+      "team": "Bruce Qiang",
+      "score": 0.9995,
+      "external": null,
+      "rank": 6
     },
     {
       "team": "GenMI",
       "score": 0.9995,
       "external": null,
-      "rank": 5
+      "rank": 6
     },
     {
       "team": "Odyssey",
       "score": 0.9989,
       "external": null,
-      "rank": 7
+      "rank": 10
     },
     {
       "team": "KANGSUNG LEE",
       "score": 0.9986,
       "external": null,
-      "rank": 8
+      "rank": 11
+    },
+    {
+      "team": "Preceptor AI",
+      "score": 0.9984,
+      "external": null,
+      "rank": 12
     },
     {
       "team": "TBVisionAI",
       "score": 0.9978,
       "external": null,
-      "rank": 9
+      "rank": 13
+    },
+    {
+      "team": "Bamti",
+      "score": 0.9978,
+      "external": null,
+      "rank": 13
+    },
+    {
+      "team": "TBITers",
+      "score": 0.997,
+      "external": null,
+      "rank": 15
     },
     {
       "team": "Glee Lab",
       "score": 0.988,
       "external": null,
-      "rank": 10
+      "rank": 16
+    },
+    {
+      "team": "ECLAB",
+      "score": 0.972,
+      "external": null,
+      "rank": 17
     }
   ]
 }
