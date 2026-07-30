@@ -84,7 +84,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <section id="leaderboard"><div class="container">
 <div class="section-label">Ranking</div>
 <h2 class="section-title">Leaderboard</h2>
-<div class="section-desc">Internal validation results received so far. Rankings are ordered by Final Score and will be updated as new submissions arrive.</div>
+<div class="section-desc">Task 1 rankings are ordered by Final Score. Task 2 rankings are ordered by the External Subset score. The leaderboard will be updated as new submissions arrive.</div>
 <p class="lb-updated">Last updated: July 24, 2026 &middot; updated daily during the internal phase</p>
 
 <h3 style="font-size:.95rem;font-weight:600;color:var(--primary);margin-top:2rem;margin-bottom:.5rem">Task 1. Cavity Detection and Segmentation</h3>
@@ -96,12 +96,28 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 </tbody></table>
 
 <h3 style="font-size:.95rem;font-weight:600;color:var(--primary);margin-top:2.5rem;margin-bottom:.5rem">Task 2. TB Diagnosis</h3>
-<p style="font-size:.84rem;color:var(--text-secondary);margin-bottom:.6rem">Task 2 rankings take <strong>both scores into account</strong>. The <strong>Final Score</strong> column reports performance on the internal validation set, and the <strong>External Subset</strong> column reports each team's score on an external subset. <strong>Both columns contribute to the final ranking.</strong></p>
-<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>Final Score</th><th>External Subset</th></tr></thead><tbody id="lb-task2">
-<tr><td>1</td><td>BCN-AIM</td><td>0.9995</td><td>-</td></tr>
-<tr><td>2</td><td>Odyssey</td><td>0.9989</td><td>-</td></tr>
-<tr><td>3</td><td>Akimasa Urakami</td><td>0.9973</td><td>-</td></tr>
-<tr><td>4</td><td>Glee Lab</td><td>0.9880</td><td>-</td></tr>
+<!--<p style="font-size:.84rem;color:var(&#45;&#45;text-secondary);margin-bottom:.6rem">Task 2 rankings are determined by the <strong>External Subset</strong> score only. The <strong>Final Score</strong> column (internal validation set) is currently hidden.</p>-->
+<!-- Final Score 열은 가림 정책에 따라 주석 처리 (각 행의 <td>&#8226;&#8226;&#8226;</td> 도 동일) -->
+<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><!--<th>Final Score</th>--><th>External Subset</th></tr></thead><tbody id="lb-task2">
+<tr><td>1</td><td>황은찬</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7774</td></tr>
+<tr><td>2</td><td>GenMI</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7623</td></tr>
+<tr><td>3</td><td>Big Hero 2</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7560</td></tr>
+<tr><td>4</td><td>Glee Lab</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7484</td></tr>
+<tr><td>5</td><td>TBITers</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7450</td></tr>
+<tr><td>6</td><td>Preceptor AI</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7429</td></tr>
+<tr><td>7</td><td>MultimodalAI</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7426</td></tr>
+<tr><td>8</td><td>Seonyu Park</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7385</td></tr>
+<tr><td>9</td><td>TBVisionAI</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7360</td></tr>
+<tr><td>10</td><td>HealCoder</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7266</td></tr>
+<tr><td>11</td><td>Bruce Qiang</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7163</td></tr>
+<tr><td>12</td><td>GIGAstudy</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7027</td></tr>
+<tr><td>13</td><td>KANGSUNG LEE</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7021</td></tr>
+<tr><td>14</td><td>Bamti</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6959</td></tr>
+<tr><td>15</td><td>FOCUS</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6827</td></tr>
+<tr><td>16</td><td>ECLAB</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6537</td></tr>
+<tr><td>17</td><td>Akimasa Urakami</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6478</td></tr>
+<tr><td>18</td><td>Odyssey</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6356</td></tr>
+<tr><td>19</td><td>BCN-AIM</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.5643</td></tr>
 </tbody></table>
 </div></section>
 
@@ -570,17 +586,40 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <script>
 (function () {
   function score(value) {
-    return value === null || value === undefined || value === '' ? '-' : Number(value).toFixed(4);
+    var n = Number(value);
+    return value === null || value === undefined || value === '' || isNaN(n) ? '-' : n.toFixed(4);
   }
 
-  // withExternal: Task 2 는 Final Score 우측에 External Subset 열이 하나 더 있습니다.
+  // Task 2 는 External Subset 점수로만 순위를 매깁니다 (JSON 의 rank 는 무시).
+  // external 이 없는 팀은 맨 아래로 내리고 순위는 '-' 로 둡니다. 동점은 같은 순위.
+  function rankByExternal(rows) {
+    var sorted = rows.slice().sort(function (a, b) {
+      var av = typeof a.external === 'number' ? a.external : -Infinity;
+      var bv = typeof b.external === 'number' ? b.external : -Infinity;
+      return bv - av;
+    });
+    var prev = null;
+    var prevRank = 0;
+    sorted.forEach(function (row, i) {
+      if (typeof row.external !== 'number') { row.displayRank = '-'; return; }
+      if (row.external !== prev) prevRank = i + 1;
+      row.displayRank = prevRank;
+      prev = row.external;
+    });
+    return sorted;
+  }
+
+  // withExternal: Task 2 는 Rank·Team·External Subset 열만 표시합니다.
+  // (Final Score 가림 열을 되살리려면 아래 주석의 '•••' 셀을 복원하고
+  //  테이블 thead 의 <th>Final Score</th> 주석도 해제하세요.)
   function render(tbody, rows, withExternal) {
     if (!tbody || !Array.isArray(rows) || rows.length === 0) return;
     var frag = document.createDocumentFragment();
     rows.forEach(function (row) {
       var tr = document.createElement('tr');
-      var cells = [row.rank, row.team, score(row.score)];
-      if (withExternal) cells.push(score(row.external));
+      var cells = withExternal
+        ? [row.displayRank, row.team, /* '•••', */ score(row.external)]
+        : [row.rank, row.team, score(row.score)];
       cells.forEach(function (value) {
         var td = document.createElement('td');
         td.textContent = value;          // 팀명은 textContent 로만 삽입
@@ -599,7 +638,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
     })
     .then(function (data) {
       render(document.getElementById('lb-task1'), data.task1, false);
-      render(document.getElementById('lb-task2'), data.task2, true);
+      render(document.getElementById('lb-task2'), rankByExternal(data.task2), true);
     })
     .catch(function (err) {
       console.warn('Leaderboard JSON not loaded, keeping static table:', err);

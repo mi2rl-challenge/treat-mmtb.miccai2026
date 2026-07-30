@@ -75,104 +75,116 @@
     {
       "team": "HealCoder",
       "score": 1.0,
-      "external": null,
+      "external": 0.7266,
       "rank": 1
     },
     {
       "team": "FOCUS",
       "score": 1.0,
-      "external": null,
+      "external": 0.6827,
       "rank": 1
     },
     {
       "team": "Akimasa Urakami",
       "score": 1.0,
-      "external": null,
+      "external": 0.6478,
       "rank": 1
     },
     {
       "team": "MultimodalAI",
       "score": 1.0,
-      "external": null,
+      "external": 0.7426,
       "rank": 1
     },
     {
       "team": "Big Hero 2",
       "score": 1.0,
-      "external": null,
+      "external": 0.756,
       "rank": 1
     },
     {
       "team": "BCN-AIM",
       "score": 0.9995,
-      "external": null,
+      "external": 0.5643,
       "rank": 6
     },
     {
       "team": "Seonyu Park",
       "score": 0.9995,
-      "external": null,
+      "external": 0.7385,
       "rank": 6
     },
     {
       "team": "Bruce Qiang",
       "score": 0.9995,
-      "external": null,
+      "external": 0.7163,
       "rank": 6
     },
     {
       "team": "GenMI",
       "score": 0.9995,
-      "external": null,
+      "external": 0.7623,
       "rank": 6
     },
     {
       "team": "Odyssey",
       "score": 0.9989,
-      "external": null,
+      "external": 0.6356,
+      "rank": 10
+    },
+    {
+      "team": "황은찬",
+      "score": 0.9989,
+      "external": 0.7774,
       "rank": 10
     },
     {
       "team": "KANGSUNG LEE",
       "score": 0.9986,
-      "external": null,
-      "rank": 11
+      "external": 0.7021,
+      "rank": 12
     },
     {
       "team": "Preceptor AI",
       "score": 0.9984,
-      "external": null,
-      "rank": 12
+      "external": 0.7429,
+      "rank": 13
+    },
+    {
+      "team": "GIGAstudy",
+      "score": 0.9984,
+      "external": 0.7027,
+      "rank": 13
     },
     {
       "team": "TBVisionAI",
       "score": 0.9978,
-      "external": null,
-      "rank": 13
+      "external": 0.736,
+      "rank": 15
     },
     {
       "team": "Bamti",
       "score": 0.9978,
-      "external": null,
-      "rank": 13
+      "external": 0.6959,
+      "rank": 15
     },
     {
       "team": "TBITers",
       "score": 0.997,
-      "external": null,
-      "rank": 15
+      "external": 0.745,
+      "rank": 17
     },
     {
       "team": "Glee Lab",
       "score": 0.988,
-      "external": null,
-      "rank": 16
+      "external": 0.7484,
+      "rank": 18
     },
     {
       "team": "ECLAB",
       "score": 0.972,
-      "external": null,
-      "rank": 17
+      "external": 0.6537,
+      "rank": 19
     }
   ]
 }
