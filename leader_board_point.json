@@ -201,10 +201,16 @@
       "rank": 18
     },
     {
+      "team": "Hao Tang",
+      "score": 0,
+      "external": 0.7067,
+      "rank": 19
+    },
+    {
       "team": "ECLAB",
       "score": 0.972,
       "external": 0.6537,
-      "rank": 19
+      "rank": 20
     }
   ]
 }
