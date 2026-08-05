@@ -34,6 +34,12 @@ footer{text-align:center;padding:1.5rem 2rem;font-size:.78rem;color:var(--text-m
 .org-list-dept .org-item>div:first-child{flex:0 0 46px}
 .lb-table td:first-child{width:56px;font-weight:600}.lb-table td:last-child{font-weight:700;color:var(--primary)}.lb-empty{font-size:.88rem;color:var(--text-muted);margin-top:.75rem;font-style:italic}
 .lb-updated{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--text-muted);margin-top:.35rem}
+.lb-switch{display:inline-flex;gap:.2rem;background:var(--bg-alt);border:1px solid var(--border);border-radius:100px;padding:.25rem}.lb-switch button{font-family:'Inter';font-size:.82rem;font-weight:600;color:var(--text-secondary);background:none;border:none;border-radius:100px;padding:.42rem 1.3rem;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}.lb-switch button:hover{color:var(--primary)}.lb-switch button[aria-selected="true"]{background:var(--surface);color:var(--primary);box-shadow:0 1px 3px rgba(15,23,42,.12)}
+.lb-panel[hidden]{display:none}.lb-panel{animation:lbSwap .3s ease}@keyframes lbSwap{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.lb-panel-note{font-size:.87rem;color:var(--text-secondary);margin-top:1.1rem}
+.lb-task-title{font-size:.95rem;font-weight:600;color:var(--primary);margin-top:2.25rem;margin-bottom:.5rem}.lb-panel>:first-child{margin-top:1.1rem}
+.lb-block.is-empty table{display:none}.lb-block:not(.is-empty) .lb-empty{display:none}
+.lb-table .lb-sub{font-family:'IBM Plex Mono',monospace;font-size:.78em;font-weight:400;color:var(--text-muted);white-space:nowrap}
 </style>
 </head>
 <body>
@@ -48,10 +54,10 @@ footer{text-align:center;padding:1.5rem 2rem;font-size:.78rem;color:var(--text-m
 </p>
 <!---->
 <div style="display:flex;flex-direction:column;align-items:center;gap:.6rem;margin-bottom:2rem;font-size:.88rem">
-<div style="background:var(--primary-light);color:var(--primary);padding:.5rem 1.25rem;border-radius:8px;font-weight:600">
+<div style="color:var(--text-muted)">
 Apr 10 &ndash; Jul 31, 2026 &mdash; Application for Participation
 </div>
-<div style="color:var(--text-muted)">
+<div style="background:var(--primary-light);color:var(--primary);padding:.5rem 1.25rem;border-radius:8px;font-weight:600">
 May 22 &ndash; Aug 20, 2026 &mdash; (Internal &middot; External) Competition Phase
 </div>
 <div style="color:var(--text-muted)">
@@ -84,11 +90,19 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <section id="leaderboard"><div class="container">
 <div class="section-label">Ranking</div>
 <h2 class="section-title">Leaderboard</h2>
-<div class="section-desc">Task 1 rankings are ordered by Final Score. Task 2 rankings are ordered by the External Subset score. The leaderboard will be updated as new submissions arrive.</div>
-<p class="lb-updated">Last updated: July 30, 2026 &middot; updated daily during the internal phase</p>
+<div class="section-desc">The leaderboard will be updated as new submissions arrive. Task 1 rankings are ordered by Final Score. Task 2 rankings are ordered by the External Fullset score.</div>
 
-<h3 style="font-size:.95rem;font-weight:600;color:var(--primary);margin-top:2rem;margin-bottom:.5rem">Task 1. Cavity Detection and Segmentation</h3>
-<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>Final Score</th></tr></thead><tbody id="lb-task1">
+<div class="lb-switch" role="tablist" aria-label="Leaderboard phase">
+<button type="button" role="tab" id="lb-tab-internal" aria-controls="lb-panel-internal" aria-selected="false" tabindex="-1" data-phase="internal">Internal</button>
+<button type="button" role="tab" id="lb-tab-external" aria-controls="lb-panel-external" aria-selected="true" data-phase="external">External</button>
+</div>
+
+<!-- INTERNAL PHASE -->
+<div class="lb-panel" id="lb-panel-internal" role="tabpanel" aria-labelledby="lb-tab-internal" hidden>
+<p class="lb-updated">Internal phase &middot; last updated July 30, 2026</p>
+<h3 class="lb-task-title">Task 1. Cavity Detection and Segmentation</h3>
+<div class="lb-block">
+<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>Final Score</th></tr></thead><tbody id="lb-task1-internal">
 <tr><td>1</td><td>Seonyu Park</td><td>0.9025</td></tr>
 <tr><td>2</td><td>HealCoder</td><td>0.8503</td></tr>
 <tr><td>3</td><td>FOCUS</td><td>0.8133</td></tr>
@@ -108,31 +122,78 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <tr><td>17</td><td>GIGAstudy</td><td>0.6523</td></tr>
 <tr><td>18</td><td>ECLAB</td><td>0.6231</td></tr>
 </tbody></table>
+<p class="lb-empty">Internal-phase scores for Task 1 have not been published yet.</p>
+</div>
 
-<h3 style="font-size:.95rem;font-weight:600;color:var(--primary);margin-top:2.5rem;margin-bottom:.5rem">Task 2. TB Diagnosis</h3>
-<!--<p style="font-size:.84rem;color:var(&#45;&#45;text-secondary);margin-bottom:.6rem">Task 2 rankings are determined by the <strong>External Subset</strong> score only. The <strong>Final Score</strong> column (internal validation set) is currently hidden.</p>-->
-<!-- Final Score 열은 가림 정책에 따라 주석 처리 (각 행의 <td>&#8226;&#8226;&#8226;</td> 도 동일) -->
-<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><!--<th>Final Score</th>--><th>External Subset</th></tr></thead><tbody id="lb-task2">
-<tr><td>1</td><td>황은찬</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7774</td></tr>
-<tr><td>2</td><td>GenMI</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7623</td></tr>
-<tr><td>3</td><td>Big Hero 2</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7560</td></tr>
-<tr><td>4</td><td>Glee Lab</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7484</td></tr>
-<tr><td>5</td><td>TBITers</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7450</td></tr>
-<tr><td>6</td><td>Preceptor AI</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7429</td></tr>
-<tr><td>7</td><td>MultimodalAI</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7426</td></tr>
-<tr><td>8</td><td>Seonyu Park</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7385</td></tr>
-<tr><td>9</td><td>TBVisionAI</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7360</td></tr>
-<tr><td>10</td><td>HealCoder</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7266</td></tr>
-<tr><td>11</td><td>Bruce Qiang</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7163</td></tr>
-<tr><td>12</td><td>GIGAstudy</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7027</td></tr>
-<tr><td>13</td><td>KANGSUNG LEE</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.7021</td></tr>
-<tr><td>14</td><td>Bamti</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6959</td></tr>
-<tr><td>15</td><td>FOCUS</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6827</td></tr>
-<tr><td>16</td><td>ECLAB</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6537</td></tr>
-<tr><td>17</td><td>Akimasa Urakami</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6478</td></tr>
-<tr><td>18</td><td>Odyssey</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.6356</td></tr>
-<tr><td>19</td><td>BCN-AIM</td><!--<td>&#8226;&#8226;&#8226;</td>--><td>0.5643</td></tr>
+<h3 class="lb-task-title">Task 2. TB Diagnosis</h3>
+<!-- Task 2 는 내부 검증 단계에서도 External Subset 점수로만 순위를 매깁니다.
+     Final Score 열은 가림 정책에 따라 표시하지 않습니다. -->
+<div class="lb-block">
+<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>External Subset</th></tr></thead><tbody id="lb-task2-internal">
+<tr><td>1</td><td>황은찬</td><td>0.7774</td></tr>
+<tr><td>2</td><td>GenMI</td><td>0.7623</td></tr>
+<tr><td>3</td><td>Big Hero 2</td><td>0.7560</td></tr>
+<tr><td>4</td><td>Glee Lab</td><td>0.7484</td></tr>
+<tr><td>5</td><td>TBITers</td><td>0.7450</td></tr>
+<tr><td>6</td><td>Preceptor AI</td><td>0.7429</td></tr>
+<tr><td>7</td><td>MultimodalAI</td><td>0.7426</td></tr>
+<tr><td>8</td><td>Seonyu Park</td><td>0.7385</td></tr>
+<tr><td>9</td><td>TBVisionAI</td><td>0.7360</td></tr>
+<tr><td>10</td><td>HealCoder</td><td>0.7266</td></tr>
+<tr><td>11</td><td>Bruce Qiang</td><td>0.7163</td></tr>
+<tr><td>12</td><td>Hao Tang</td><td>0.7067</td></tr>
+<tr><td>13</td><td>GIGAstudy</td><td>0.7027</td></tr>
+<tr><td>14</td><td>KANGSUNG LEE</td><td>0.7021</td></tr>
+<tr><td>15</td><td>Bamti</td><td>0.6959</td></tr>
+<tr><td>16</td><td>FOCUS</td><td>0.6827</td></tr>
+<tr><td>17</td><td>ECLAB</td><td>0.6537</td></tr>
+<tr><td>18</td><td>Akimasa Urakami</td><td>0.6478</td></tr>
+<tr><td>19</td><td>Odyssey</td><td>0.6356</td></tr>
+<tr><td>20</td><td>BCN-AIM</td><td>0.5643</td></tr>
 </tbody></table>
+<p class="lb-empty">Internal-phase scores for Task 2 have not been published yet.</p>
+</div>
+</div>
+
+<!-- EXTERNAL PHASE
+     external full set 점수만 싣습니다. JSON 의 "task1_external"(team/accuracy/dice/score)
+     과 "task2_external"(team/score) 배열로 렌더링되며, 점수가 없는 팀은 '-' 로 남습니다. -->
+<div class="lb-panel" id="lb-panel-external" role="tabpanel" aria-labelledby="lb-tab-external">
+<p class="lb-updated">External phase &middot; last updated August 5, 2026</p>
+<h3 class="lb-task-title">Task 1. Cavity Detection and Segmentation</h3>
+<div class="lb-block">
+<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>Final Score (Acc, Dice)</th></tr></thead><tbody id="lb-task1-external">
+<tr><td>1</td><td>Limitless</td><td>0.5499<span class="lb-sub"> (0.7343, 0.1198)</span></td></tr>
+<tr><td>2</td><td>Glee Lab</td><td>0.5428<span class="lb-sub"> (0.7010, 0.1737)</span></td></tr>
+<tr><td>3</td><td>HealCoder</td><td>0.5219<span class="lb-sub"> (0.6757, 0.1631)</span></td></tr>
+<tr><td>4</td><td>dukju kim</td><td>0.5170<span class="lb-sub"> (0.6713, 0.1568)</span></td></tr>
+<tr><td>5</td><td>MultimodalAI</td><td>0.5127<span class="lb-sub"> (0.6477, 0.1975)</span></td></tr>
+<tr><td>6</td><td>Seonyu Park</td><td>0.4849<span class="lb-sub"> (0.6425, 0.1172)</span></td></tr>
+<tr><td>7</td><td>MIL-X</td><td>0.4620<span class="lb-sub"> (0.5664, 0.2184)</span></td></tr>
+<tr><td>8</td><td>TBVisionAI</td><td>0.4043<span class="lb-sub"> (0.5288, 0.1137)</span></td></tr>
+<tr><td>-</td><td>FOCUS</td><td>-</td></tr>
+<tr><td>-</td><td>Akimasa Urakami</td><td>-</td></tr>
+</tbody></table>
+<p class="lb-empty">External-phase results for Task 1 have not been released yet.</p>
+</div>
+
+<h3 class="lb-task-title">Task 2. TB Diagnosis</h3>
+<div class="lb-block">
+<table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>External Fullset</th></tr></thead><tbody id="lb-task2-external">
+<tr><td>1</td><td>Glee Lab</td><td>0.8680</td></tr>
+<tr><td>2</td><td>GenMI</td><td>0.8567</td></tr>
+<tr><td>3</td><td>Preceptor AI</td><td>0.8472</td></tr>
+<tr><td>4</td><td>Big Hero 2</td><td>0.8384</td></tr>
+<tr><td>5</td><td>황은찬</td><td>0.8282</td></tr>
+<tr><td>6</td><td>HealCoder</td><td>0.8205</td></tr>
+<tr><td>7</td><td>TBITers</td><td>0.8105</td></tr>
+<tr><td>8</td><td>TBVisionAI</td><td>0.8026</td></tr>
+<tr><td>9</td><td>MultimodalAI</td><td>0.7982</td></tr>
+<tr><td>10</td><td>Seonyu Park</td><td>0.7629</td></tr>
+</tbody></table>
+<p class="lb-empty">External-phase results for Task 2 have not been released yet.</p>
+</div>
+</div>
 </div></section>
 
 <div class="divider"></div>
@@ -604,41 +665,61 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
     return value === null || value === undefined || value === '' || isNaN(n) ? '-' : n.toFixed(4);
   }
 
-  // Task 2 는 External Subset 점수로만 순위를 매깁니다 (JSON 의 rank 는 무시).
-  // external 이 없는 팀은 맨 아래로 내리고 순위는 '-' 로 둡니다. 동점은 같은 순위.
-  function rankByExternal(rows) {
+  // 지정한 열(key) 기준 내림차순 정렬.
+  // 내부 검증 단계: Task 1 은 'score'(Final Score), Task 2 는 'external'(External Subset).
+  // 외부 검증 단계: 아직 데이터가 없어 task1_external / task2_external 이 있을 때만 그립니다.
+  // JSON 의 rank 는 쓰지 않고 여기서 다시 매깁니다. 동점은 같은 순위,
+  // 값이 없는 팀은 맨 아래로 내리고 순위는 '-' 로 둡니다.
+  function rankBy(rows, key) {
     var sorted = rows.slice().sort(function (a, b) {
-      var av = typeof a.external === 'number' ? a.external : -Infinity;
-      var bv = typeof b.external === 'number' ? b.external : -Infinity;
+      var av = typeof a[key] === 'number' ? a[key] : -Infinity;
+      var bv = typeof b[key] === 'number' ? b[key] : -Infinity;
       return bv - av;
     });
     var prev = null;
     var prevRank = 0;
-    sorted.forEach(function (row, i) {
-      if (typeof row.external !== 'number') { row.displayRank = '-'; return; }
-      if (row.external !== prev) prevRank = i + 1;
-      row.displayRank = prevRank;
-      prev = row.external;
+    return sorted.map(function (row, i) {
+      var value = row[key];
+      var hasValue = typeof value === 'number';
+      if (hasValue && value !== prev) prevRank = i + 1;
+      if (hasValue) prev = value;
+      return { rank: hasValue ? prevRank : '-', row: row, value: value };
     });
-    return sorted;
   }
 
-  // withExternal: Task 2 는 Rank·Team·External Subset 열만 표시합니다.
-  // (Final Score 가림 열을 되살리려면 아래 주석의 '•••' 셀을 복원하고
-  //  테이블 thead 의 <th>Final Score</th> 주석도 해제하세요.)
-  function render(tbody, rows, withExternal) {
-    if (!tbody || !Array.isArray(rows) || rows.length === 0) return;
+  // subKeys 를 주면 점수 옆에 괄호로 세부 지표를 붙입니다.
+  // 예: Task 1 external → 0.5499 (0.7343, 0.1198) = Final Score (Acc, Dice)
+  function scoreCell(item, subKeys) {
+    var td = document.createElement('td');
+    td.textContent = score(item.value);
+    if (!subKeys || typeof item.value !== 'number') return td;
+    var parts = subKeys.map(function (k) { return score(item.row[k]); });
+    if (parts.indexOf('-') !== -1) return td;   // 세부 지표가 하나라도 없으면 생략
+    var span = document.createElement('span');
+    span.className = 'lb-sub';
+    span.textContent = ' (' + parts.join(', ') + ')';
+    td.appendChild(span);
+    return td;
+  }
+
+  // 해당 탭에 점수가 하나도 없으면 표 대신 안내 문구(.lb-empty)를 보여줍니다.
+  function render(id, rows, key, subKeys) {
+    var tbody = document.getElementById(id);
+    if (!tbody) return;
+    var block = tbody.closest('.lb-block');
+    var list = Array.isArray(rows) ? rankBy(rows, key) : [];
+    var hasAny = list.some(function (item) { return typeof item.value === 'number'; });
+    if (block) block.classList.toggle('is-empty', !hasAny);
+    if (!hasAny) { tbody.replaceChildren(); return; }
     var frag = document.createDocumentFragment();
-    rows.forEach(function (row) {
+    list.forEach(function (item) {
       var tr = document.createElement('tr');
-      var cells = withExternal
-        ? [row.displayRank, row.team, /* '•••', */ score(row.external)]
-        : [row.rank, row.team, score(row.score)];
-      cells.forEach(function (value) {
+      [item.rank, item.row.team].forEach(function (value) {
         var td = document.createElement('td');
         td.textContent = value;          // 팀명은 textContent 로만 삽입
         tr.appendChild(td);
       });
+      tr.appendChild(scoreCell(item, subKeys));
       frag.appendChild(tr);
     });
     tbody.replaceChildren(frag);
@@ -651,12 +732,43 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
       return res.json();
     })
     .then(function (data) {
-      render(document.getElementById('lb-task1'), data.task1, false);
-      render(document.getElementById('lb-task2'), rankByExternal(data.task2), true);
+      render('lb-task1-internal', data.task1, 'score');
+      render('lb-task2-internal', data.task2, 'external');
+      render('lb-task1-external', data.task1_external, 'score', ['accuracy', 'dice']);
+      render('lb-task2-external', data.task2_external, 'score');
     })
     .catch(function (err) {
       console.warn('Leaderboard JSON not loaded, keeping static table:', err);
     });
+})();
+
+// Internal / External 탭 전환 (같은 자리에서 카드만 교체)
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.lb-switch button'));
+  if (tabs.length === 0) return;
+
+  function select(tab, focus) {
+    tabs.forEach(function (btn) {
+      var isActive = btn === tab;
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      btn.tabIndex = isActive ? 0 : -1;
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      if (!panel) return;
+      panel.hidden = !isActive;
+      // hidden 을 껐다 켜야 교체 애니메이션이 매번 다시 재생됩니다.
+      if (isActive) { panel.style.animation = 'none'; void panel.offsetWidth; panel.style.animation = ''; }
+    });
+    if (focus) tab.focus();
+  }
+
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { select(tab, false); });
+    tab.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      select(tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length], true);
+    });
+  });
 })();
 </script>
 

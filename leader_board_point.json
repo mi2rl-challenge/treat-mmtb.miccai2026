@@ -212,5 +212,109 @@
       "external": 0.6537,
       "rank": 20
     }
+  ],
+  "task1_external": [
+    {
+      "team": "Limitless",
+      "accuracy": 0.7343,
+      "dice": 0.1198,
+      "score": 0.5499
+    },
+    {
+      "team": "Glee Lab",
+      "accuracy": 0.701,
+      "dice": 0.1737,
+      "score": 0.5428
+    },
+    {
+      "team": "HealCoder",
+      "accuracy": 0.6757,
+      "dice": 0.1631,
+      "score": 0.5219
+    },
+    {
+      "team": "dukju kim",
+      "accuracy": 0.6713,
+      "dice": 0.1568,
+      "score": 0.517
+    },
+    {
+      "team": "MultimodalAI",
+      "accuracy": 0.6477,
+      "dice": 0.1975,
+      "score": 0.5127
+    },
+    {
+      "team": "Seonyu Park",
+      "accuracy": 0.6425,
+      "dice": 0.1172,
+      "score": 0.4849
+    },
+    {
+      "team": "MIL-X",
+      "accuracy": 0.5664,
+      "dice": 0.2184,
+      "score": 0.462
+    },
+    {
+      "team": "TBVisionAI",
+      "accuracy": 0.5288,
+      "dice": 0.1137,
+      "score": 0.4043
+    },
+    {
+      "team": "FOCUS",
+      "accuracy": null,
+      "dice": null,
+      "score": null
+    },
+    {
+      "team": "Akimasa Urakami",
+      "accuracy": null,
+      "dice": null,
+      "score": null
+    }
+  ],
+  "task2_external": [
+    {
+      "team": "Glee Lab",
+      "score": 0.868
+    },
+    {
+      "team": "GenMI",
+      "score": 0.8567
+    },
+    {
+      "team": "Preceptor AI",
+      "score": 0.8472
+    },
+    {
+      "team": "Big Hero 2",
+      "score": 0.8384
+    },
+    {
+      "team": "황은찬",
+      "score": 0.8282
+    },
+    {
+      "team": "HealCoder",
+      "score": 0.8205
+    },
+    {
+      "team": "TBITers",
+      "score": 0.8105
+    },
+    {
+      "team": "TBVisionAI",
+      "score": 0.8026
+    },
+    {
+      "team": "MultimodalAI",
+      "score": 0.7982
+    },
+    {
+      "team": "Seonyu Park",
+      "score": 0.7629
+    }
   ]
 }
