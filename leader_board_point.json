@@ -264,9 +264,9 @@
     },
     {
       "team": "TBVisionAI",
-      "accuracy": 0.5288,
-      "dice": 0.1137,
-      "score": 0.4043
+      "accuracy": 0.4685,
+      "dice": 0.1284,
+      "score": 0.3665
     }
   ],
   "task2_external": [
