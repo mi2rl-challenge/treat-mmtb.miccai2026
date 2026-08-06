@@ -267,12 +267,6 @@
       "accuracy": 0.5288,
       "dice": 0.1137,
       "score": 0.4043
-    },
-    {
-      "team": "Akimasa Urakami",
-      "accuracy": null,
-      "dice": null,
-      "score": null
     }
   ],
   "task2_external": [
