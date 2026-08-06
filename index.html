@@ -17,6 +17,9 @@ section{padding:4rem 2rem}.container{max-width:900px;margin:0 auto}.section-labe
 .tasks-split{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}.task-col{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.75rem;display:flex;flex-direction:column}.task-col .task-tag{font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.6rem;padding:.3rem .7rem;border-radius:4px;display:inline-block;width:fit-content}.task-col .task-tag.t1{background:var(--primary-light);color:var(--primary)}.task-col .task-tag.t2{background:var(--accent-light);color:var(--accent)}.task-col h3{font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;color:var(--heading);margin-bottom:.4rem}.task-col .objective{color:var(--primary);font-size:.84rem;font-style:italic;margin-bottom:1rem;line-height:1.6}.task-col p{color:var(--text-secondary);font-size:.84rem;line-height:1.75;margin-bottom:.75rem}.task-col h4{font-size:.82rem;font-weight:600;color:var(--heading);margin-top:1rem;margin-bottom:.35rem}.task-col ul{color:var(--text-secondary);font-size:.84rem;line-height:1.8;padding-left:1.1rem}.metric-tag{display:inline-block;background:var(--primary-light);color:var(--primary);padding:.15rem .55rem;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:.74rem;font-weight:500;margin:.15rem .1rem}.metric-tag.t2{background:var(--accent-light);color:var(--accent)}.data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:.6rem}.data-cell{background:var(--bg-alt);border:1px solid var(--border-light);border-radius:8px;padding:.7rem .85rem}.data-cell .label{font-family:'IBM Plex Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.2rem}.data-cell .value{font-size:1.15rem;font-weight:700;color:var(--heading)}.data-cell .desc{font-size:.7rem;color:var(--text-muted);margin-top:.1rem}.task-note{font-size:.78rem;color:var(--text-muted);font-style:italic;margin-top:1rem;padding-top:.75rem;border-top:1px solid var(--border-light);line-height:1.6}
 .curation-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}.curation-placeholder{background:var(--bg-alt);border:2px dashed var(--border);border-radius:10px;padding:3rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:220px}.curation-placeholder .ph-icon{font-size:2rem;margin-bottom:.75rem;opacity:.5}.curation-placeholder .ph-label{font-size:.88rem;font-weight:600;color:var(--text-muted);margin-bottom:.25rem}.curation-placeholder .ph-desc{font-size:.78rem;color:var(--text-muted)}
 .sched-table{width:100%;border-collapse:collapse;margin-top:1.5rem}.sched-table th{text-align:left;font-size:.72rem;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);padding:.6rem .8rem;border-bottom:2px solid var(--border)}.sched-table td{padding:.75rem .8rem;border-bottom:1px solid var(--border-light);font-size:.88rem}.sched-table td:first-child{font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--primary);white-space:nowrap;width:220px;font-weight:500}.sched-table tr.phase-row{background:var(--primary-light)}.sched-table tr.phase-row td{font-weight:600;color:var(--primary-dark)}
+.sched-table tr.done-row td,.sched-table tr.done-row td:first-child{color:var(--text-muted)}
+.st-badge{font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:600;padding:.12rem .45rem;border-radius:4px;margin-left:.5rem;letter-spacing:.04em;vertical-align:middle}
+.st-badge.done{background:#e8f5ec;color:#15803d}.st-badge.now{background:var(--primary-light);color:var(--primary-dark)}
 .eval-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:1.5rem}.eval-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem}.eval-card .tag{font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.6rem}.eval-card h3{font-size:.95rem;font-weight:600;margin-bottom:.5rem}.eval-card p,.eval-card ul{font-size:.86rem;color:var(--text-secondary);line-height:1.75}.eval-card ul{padding-left:1.1rem}
 .rule-item{display:flex;gap:.85rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--border-light)}.rule-item:last-child{border-bottom:none}.rule-num{font-family:'IBM Plex Mono',monospace;font-size:.75rem;font-weight:600;color:var(--primary);background:var(--primary-light);width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.rule-item h4{font-size:.88rem;font-weight:600;margin-bottom:.15rem}.rule-item p{font-size:.84rem;color:var(--text-secondary);line-height:1.7}
 .prize-task-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;margin-top:2rem}.prize-task-header:first-of-type{margin-top:0}.prize-task-header h3{font-size:.92rem;font-weight:600;color:var(--heading)}.prize-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1rem}.prize-card{border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center;background:var(--surface);position:relative;overflow:hidden}.prize-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}.prize-card.gold{border-color:#e5c07a}.prize-card.gold::before{background:linear-gradient(90deg,#d4a843,#f0d078)}.prize-card.silver{border-color:#c0c8d0}.prize-card.silver::before{background:linear-gradient(90deg,#a0aab4,#cdd4dc)}.prize-card.bronze{border-color:#c8a882}.prize-card.bronze::before{background:linear-gradient(90deg,#a87e54,#d4b48c)}.prize-card .rank{font-size:1.75rem;margin-bottom:.3rem}.prize-card .amount{font-family:'Source Serif 4',serif;font-size:1.4rem;font-weight:700;color:var(--heading)}.prize-card .place{font-size:.78rem;color:var(--text-muted)}.award-policy{background:var(--bg-alt);border:1px solid var(--border-light);border-radius:8px;padding:1.25rem 1.5rem;margin-top:1.5rem}.award-policy h4{font-size:.88rem;font-weight:600;color:var(--heading);margin-bottom:.5rem}.award-policy p{font-size:.86rem;color:var(--text-secondary);line-height:1.8}.prize-extra{margin-top:1.25rem;font-size:.86rem;color:var(--text-secondary);line-height:1.8}
@@ -163,15 +166,15 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <h3 class="lb-task-title">Task 1. Cavity Detection and Segmentation</h3>
 <div class="lb-block">
 <table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>Final Score (Acc, Dice)</th></tr></thead><tbody id="lb-task1-external">
-<tr><td>1</td><td>Limitless</td><td>0.5499<span class="lb-sub"> (0.7343, 0.1198)</span></td></tr>
-<tr><td>2</td><td>Glee Lab</td><td>0.5428<span class="lb-sub"> (0.7010, 0.1737)</span></td></tr>
-<tr><td>3</td><td>HealCoder</td><td>0.5219<span class="lb-sub"> (0.6757, 0.1631)</span></td></tr>
-<tr><td>4</td><td>dukju kim</td><td>0.5170<span class="lb-sub"> (0.6713, 0.1568)</span></td></tr>
+<tr><td>1</td><td>FOCUS</td><td>0.5709<span class="lb-sub"> (0.7517, 0.1490)</span></td></tr>
+<tr><td>2</td><td>Limitless</td><td>0.5499<span class="lb-sub"> (0.7343, 0.1198)</span></td></tr>
+<tr><td>3</td><td>dukju kim</td><td>0.5296<span class="lb-sub"> (0.6862, 0.1644)</span></td></tr>
+<tr><td>4</td><td>HealCoder</td><td>0.5219<span class="lb-sub"> (0.6757, 0.1631)</span></td></tr>
 <tr><td>5</td><td>MultimodalAI</td><td>0.5127<span class="lb-sub"> (0.6477, 0.1975)</span></td></tr>
-<tr><td>6</td><td>Seonyu Park</td><td>0.4849<span class="lb-sub"> (0.6425, 0.1172)</span></td></tr>
-<tr><td>7</td><td>MIL-X</td><td>0.4620<span class="lb-sub"> (0.5664, 0.2184)</span></td></tr>
-<tr><td>8</td><td>TBVisionAI</td><td>0.4043<span class="lb-sub"> (0.5288, 0.1137)</span></td></tr>
-<tr><td>-</td><td>FOCUS</td><td>-</td></tr>
+<tr><td>6</td><td>Glee Lab</td><td>0.4978<span class="lb-sub"> (0.6311, 0.1866)</span></td></tr>
+<tr><td>7</td><td>Seonyu Park</td><td>0.4849<span class="lb-sub"> (0.6425, 0.1172)</span></td></tr>
+<tr><td>8</td><td>MIL-X</td><td>0.4620<span class="lb-sub"> (0.5664, 0.2184)</span></td></tr>
+<tr><td>9</td><td>TBVisionAI</td><td>0.4043<span class="lb-sub"> (0.5288, 0.1137)</span></td></tr>
 <tr><td>-</td><td>Akimasa Urakami</td><td>-</td></tr>
 </tbody></table>
 <p class="lb-empty">External-phase results for Task 1 have not been released yet.</p>
@@ -180,14 +183,14 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <h3 class="lb-task-title">Task 2. TB Diagnosis</h3>
 <div class="lb-block">
 <table class="sched-table lb-table"><thead><tr><th>Rank</th><th>Team</th><th>External Fullset</th></tr></thead><tbody id="lb-task2-external">
-<tr><td>1</td><td>Glee Lab</td><td>0.8680</td></tr>
-<tr><td>2</td><td>GenMI</td><td>0.8567</td></tr>
-<tr><td>3</td><td>Preceptor AI</td><td>0.8472</td></tr>
-<tr><td>4</td><td>Big Hero 2</td><td>0.8384</td></tr>
-<tr><td>5</td><td>황은찬</td><td>0.8282</td></tr>
-<tr><td>6</td><td>HealCoder</td><td>0.8205</td></tr>
-<tr><td>7</td><td>TBITers</td><td>0.8105</td></tr>
-<tr><td>8</td><td>TBVisionAI</td><td>0.8026</td></tr>
+<tr><td>1</td><td>Glee Lab</td><td>0.8670</td></tr>
+<tr><td>2</td><td>Preceptor AI</td><td>0.8472</td></tr>
+<tr><td>3</td><td>Big Hero 2</td><td>0.8384</td></tr>
+<tr><td>4</td><td>황은찬</td><td>0.8383</td></tr>
+<tr><td>5</td><td>HealCoder</td><td>0.8205</td></tr>
+<tr><td>6</td><td>TBITers</td><td>0.8105</td></tr>
+<tr><td>7</td><td>TBVisionAI</td><td>0.8026</td></tr>
+<tr><td>8</td><td>GenMI</td><td>0.8000</td></tr>
 <tr><td>9</td><td>MultimodalAI</td><td>0.7982</td></tr>
 <tr><td>10</td><td>Seonyu Park</td><td>0.7629</td></tr>
 </tbody></table>
@@ -293,7 +296,7 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <div class="overview-grid">
 <div class="ov-card"><div class="icon">🧩</div><h3>Task 1: Cavity Detection & Segmentation</h3><p>Deep learning–based detection and segmentation of cavitary lesions from CXR, targeting high-risk indicators of TB severity and infectiousness.</p></div>
 <div class="ov-card"><div class="icon">🔬</div><h3>Task 2: TB Diagnosis</h3><p>TB/Normal classification through multimodal fusion of CXR imaging and clinical metadata across multi-center international data.</p></div>
-<div class="ov-card"><div class="icon">🌍</div><h3>Multi-Center Validation</h3><p>External validation across 5 international sites — Korea, Mongolia, Peru, and the Philippines — ensuring clinical generalizability.</p></div>
+<div class="ov-card"><div class="icon">🌍</div><h3>Multi-Center Validation</h3><p>External validation across 4 countries — Korea, Mongolia, Peru, and the Philippines — ensuring clinical generalizability.</p></div>
 </div></div></section>
 
 <div class="divider"></div>
@@ -428,11 +431,11 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <h2 class="section-title">Schedule</h2>
 <div class="section-desc">All deadlines are based on Korea Standard Time (KST) unless otherwise noted.</div>
 <table class="sched-table"><thead><tr><th>Date</th><th>Event</th></tr></thead><tbody>
-<tr><td>Apr 10 – July 31, 2026</td><td>Application for Participation</td></tr>
-<tr><td>May 22, 2026</td><td>Internal Dataset Release</td></tr>
-<tr class="phase-row"><td>May 22 – July 24, 2026</td><td>Internal Competition Phase</td></tr>
-<tr><td>July 31, 2026</td><td>Announcement of Qualified Teams for External Competition</td></tr>
-<tr class="phase-row"><td>Aug 1 – Aug 20, 2026</td><td>External Competition Phase</td></tr>
+<tr class="done-row"><td>Apr 10 – July 31, 2026</td><td>Application for Participation <span class="st-badge done">Closed</span></td></tr>
+<tr class="done-row"><td>May 22, 2026</td><td>Internal Dataset Release <span class="st-badge done">Done</span></td></tr>
+<tr class="done-row"><td>May 22 – July 24, 2026</td><td>Internal Competition Phase <span class="st-badge done">Completed</span></td></tr>
+<tr class="done-row"><td>July 31, 2026</td><td>Announcement of Qualified Teams for External Competition <span class="st-badge done">Announced</span></td></tr>
+<tr class="phase-row"><td>Aug 1 – Aug 20, 2026</td><td>External Competition Phase <span class="st-badge now">In Progress</span></td></tr>
 <tr><td>Aug 20 – Aug 31, 2026</td><td>Organizer Verification and Docker Evaluation</td></tr>
 <tr><td>September 1, 2026</td><td>Final Ranking Announcement and MICCAI Invitation</td></tr>
 <tr><td>September 27, 2026</td><td>Challenge at MICCAI 2026 and Award Ceremony</td></tr>
@@ -441,12 +444,12 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 
 <div style="margin-top:2rem">
 <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1rem">
-<h4 style="font-size:.88rem;font-weight:600;color:var(--primary);margin-bottom:.5rem">1st Stage — Internal Competition</h4>
+<h4 style="font-size:.88rem;font-weight:600;color:var(--primary);margin-bottom:.5rem">1st Stage — Internal Competition <span class="st-badge done">Completed</span></h4>
 <p style="font-size:.86rem;color:var(--text-secondary);line-height:1.75">Participants will develop and validate their models using the internal dataset provided by the organizers. Based on the ranking achieved in this stage, selected teams will advance to the next stage.</p>
 <p style="font-size:.82rem;color:var(--text-muted);margin-top:.5rem">Submission deadline: <strong>July 24, 2026, 23:59 (KST)</strong></p>
 </div>
 <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1rem">
-<h4 style="font-size:.88rem;font-weight:600;color:var(--primary);margin-bottom:.5rem">2nd Stage — External Competition</h4>
+<h4 style="font-size:.88rem;font-weight:600;color:var(--primary);margin-bottom:.5rem">2nd Stage — External Competition <span class="st-badge now">In Progress</span></h4>
 <p style="font-size:.86rem;color:var(--text-secondary);line-height:1.75">Selected teams will participate in the external competition for final evaluation. During this stage, each team may submit up to two times per week and must provide a Dockerfile. All submitted Dockerfiles will be executed directly by the organizers for final ranking.</p>
 <p style="font-size:.82rem;color:var(--text-muted);margin-top:.5rem">A sample Dockerfile and submission template will be provided via the GitHub repository before the external competition begins.</p>
 <p style="font-size:.82rem;color:var(--text-muted);margin-top:.25rem">Submission deadline: <strong>August 20, 2026, 09:00 AM (KST)</strong></p>
@@ -461,10 +464,10 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 <h3 style="font-family:'Source Serif 4',serif;font-size:1.15rem;font-weight:700;color:var(--heading);margin-bottom:.5rem">Challenge Day at MICCAI 2026</h3>
 <p style="font-size:.86rem;color:var(--text-secondary);margin-bottom:1rem">Part of the Joint Thematic Day &mdash; <em>Building Inclusive and Efficient AI Technologies for Medical Imaging in Africa and Other Resource-Constrained Settings</em></p>
 <h4 style="font-size:.92rem;font-weight:600;color:var(--primary);margin-bottom:.5rem">SE I: TB Challenges (8:00 &ndash; 10:30)</h4>
-<p style="font-size:.84rem;color:var(--text-secondary);margin-bottom:1rem">Chairs: Namkung Kim &amp; Sengjoo Park</p>
+<p style="font-size:.84rem;color:var(--text-secondary);margin-bottom:1rem">Chairs: Namkug Kim &amp; Seungjoo Park</p>
 <table class="day-table"><thead><tr><th>Time</th><th>Session</th></tr></thead><tbody>
 <tr><td>8:00 &ndash; 8:05</td><td>Opening Remarks</td></tr>
-<tr><td>8:00 &ndash; 8:20</td><td><strong>(Keynote)</strong> Hoon Sang Lee (Right Foundation) &mdash; <em>Bridging the Diagnostic Gap: Practical AI Deployment for TB in the Global South</em></td></tr>
+<tr><td>8:05 &ndash; 8:20</td><td><strong>(Keynote)</strong> Hoon Sang Lee (Right Foundation) &mdash; <em>Bridging the Diagnostic Gap: Practical AI Deployment for TB in the Global South</em></td></tr>
 <tr><td>8:20 &ndash; 8:40</td><td>Radiologists at the Forefront of Tuberculosis Eradication</td></tr>
 <tr><td>8:40 &ndash; 9:00</td><td>TREAT-MMTB 2026 Challenge Overview</td></tr>
 <tr><td>9:00 &ndash; 10:00</td><td>Top-Performing Teams Presentations</td></tr>
@@ -772,4 +775,5 @@ Sep 27, 2026 &mdash; MICCAI 2026 Awards, Strasbourg, France
 })();
 </script>
 
-<!--<script data-cfasync="f-->
+</body>
+</html>
