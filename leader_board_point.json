@@ -272,7 +272,7 @@
   "task2_external": [
     {
       "team": "Glee Lab",
-      "score": 0.8670
+      "score": 0.8617
     },
     {
       "team": "Big Hero 2",
@@ -281,10 +281,6 @@
     {
       "team": "황은찬",
       "score": 0.8383
-    },
-    {
-      "team": "HealCoder",
-      "score": 0.8205
     },
     {
       "team": "TBITers",
@@ -301,6 +297,10 @@
     {
       "team": "MultimodalAI",
       "score": 0.7982
+    },
+    {
+      "team": "HealCoder",
+      "score": 0.7763
     },
     {
       "team": "Seonyu Park",
