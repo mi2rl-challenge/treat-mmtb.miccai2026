@@ -221,34 +221,34 @@
       "score": 0.5709
     },
     {
+      "team": "HealCoder",
+      "accuracy": 0.7631,
+      "dice": 0.0526,
+      "score": 0.5500
+    },
+    {
       "team": "Limitless",
       "accuracy": 0.7343,
       "dice": 0.1198,
       "score": 0.5499
     },
     {
-      "team": "Glee Lab",
-      "accuracy": 0.701,
-      "dice": 0.1737,
-      "score": 0.5428
-    },
-    {
       "team": "dukju kim",
-      "accuracy": 0.6862,
-      "dice": 0.1644,
-      "score": 0.5296
-    },
-    {
-      "team": "HealCoder",
-      "accuracy": 0.6757,
-      "dice": 0.1631,
-      "score": 0.5219
+      "accuracy": 0.7063,
+      "dice": 0.1657,
+      "score": 0.5441
     },
     {
       "team": "MultimodalAI",
       "accuracy": 0.6477,
       "dice": 0.1975,
       "score": 0.5127
+    },
+    {
+      "team": "Glee Lab",
+      "accuracy": 0.6311,
+      "dice": 0.1866,
+      "score": 0.4978
     },
     {
       "team": "Seonyu Park",
