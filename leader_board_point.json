@@ -233,22 +233,22 @@
       "score": 0.5499
     },
     {
+      "team": "Glee Lab",
+      "accuracy": 0.7010,
+      "dice": 0.1768,
+      "score": 0.5438
+    },
+    {
       "team": "dukju kim",
-      "accuracy": 0.7063,
-      "dice": 0.1657,
-      "score": 0.5441
+      "accuracy": 0.6774,
+      "dice": 0.1674,
+      "score": 0.5244
     },
     {
       "team": "MultimodalAI",
       "accuracy": 0.6477,
       "dice": 0.1975,
       "score": 0.5127
-    },
-    {
-      "team": "Glee Lab",
-      "accuracy": 0.6311,
-      "dice": 0.1866,
-      "score": 0.4978
     },
     {
       "team": "Seonyu Park",
@@ -258,9 +258,9 @@
     },
     {
       "team": "MIL-X",
-      "accuracy": 0.5769,
-      "dice": 0.2123,
-      "score": 0.4675
+      "accuracy": 0.4921,
+      "dice": 0.2288,
+      "score": 0.4131
     },
     {
       "team": "TBVisionAI",
