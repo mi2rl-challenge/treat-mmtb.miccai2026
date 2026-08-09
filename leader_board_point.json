@@ -215,6 +215,12 @@
   ],
   "task1_external": [
     {
+      "team": "TBVisionAI",
+      "accuracy": 0.8304,
+      "dice": 0.0046,
+      "score": 0.5827
+    },
+    {
       "team": "FOCUS",
       "accuracy": 0.7517,
       "dice": 0.1490,
@@ -261,18 +267,12 @@
       "accuracy": 0.4921,
       "dice": 0.2288,
       "score": 0.4131
-    },
-    {
-      "team": "TBVisionAI",
-      "accuracy": 0.4685,
-      "dice": 0.1284,
-      "score": 0.3665
     }
   ],
   "task2_external": [
     {
       "team": "Glee Lab",
-      "score": 0.8617
+      "score": 0.8681
     },
     {
       "team": "Big Hero 2",
