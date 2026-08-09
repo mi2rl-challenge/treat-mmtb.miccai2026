@@ -299,16 +299,16 @@
       "score": 0.7982
     },
     {
-      "team": "HealCoder",
-      "score": 0.7763
-    },
-    {
       "team": "Seonyu Park",
       "score": 0.7629
     },
     {
       "team": "Preceptor AI",
       "score": 0.7548
-    }
+    },
+    {
+      "team": "HealCoder",
+      "score": 0.6919
+    },
   ]
 }
