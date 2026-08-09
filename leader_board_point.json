@@ -222,9 +222,9 @@
     },
     {
       "team": "FOCUS",
-      "accuracy": 0.7517,
-      "dice": 0.1490,
-      "score": 0.5709
+      "accuracy": 0.7386,
+      "dice": 0.1568,
+      "score": 0.5641
     },
     {
       "team": "HealCoder",
@@ -245,6 +245,12 @@
       "score": 0.5438
     },
     {
+      "team": "MIL-X",
+      "accuracy": 0.6836,
+      "dice": 0.1908,
+      "score": 0.5357
+    }
+    {
       "team": "dukju kim",
       "accuracy": 0.6774,
       "dice": 0.1674,
@@ -261,12 +267,6 @@
       "accuracy": 0.6425,
       "dice": 0.1172,
       "score": 0.4849
-    },
-    {
-      "team": "MIL-X",
-      "accuracy": 0.4921,
-      "dice": 0.2288,
-      "score": 0.4131
     }
   ],
   "task2_external": [
