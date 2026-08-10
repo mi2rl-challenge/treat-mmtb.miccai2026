@@ -56,11 +56,11 @@
     { "team": "Glee Lab", "score": 0.8703 },
     { "team": "Big Hero 2", "score": 0.8384 },
     { "team": "황은찬", "score": 0.8383 },
-    { "team": "TBITers", "score": 0.8105 },
     { "team": "TBVisionAI", "score": 0.8023 },
     { "team": "GenMI", "score": 0.8000 },
     { "team": "MultimodalAI", "score": 0.7982 },
     { "team": "Seonyu Park", "score": 0.7735 },
+    { "team": "TBITers", "score": 0.7579 },
     { "team": "Preceptor AI", "score": 0.7548 },
     { "team": "HealCoder", "score": 0.6919 }
   ]
