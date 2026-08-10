@@ -53,7 +53,7 @@
     { "team": "Seonyu Park", "accuracy": 0.6425, "dice": 0.1172, "score": 0.4849 }
   ],
   "task2_external": [
-    { "team": "Glee Lab", "score": 0.8640 },
+    { "team": "Glee Lab", "score": 0.8703 },
     { "team": "Big Hero 2", "score": 0.8384 },
     { "team": "황은찬", "score": 0.8383 },
     { "team": "TBITers", "score": 0.8105 },
