@@ -46,11 +46,11 @@
     { "team": "Limitless", "accuracy": 0.7885, "dice": 0.0810, "score": 0.5762 },
     { "team": "FOCUS", "accuracy": 0.7386, "dice": 0.1568, "score": 0.5641 },
     { "team": "HealCoder", "accuracy": 0.7378, "dice": 0.1400, "score": 0.5584 },
+    { "team": "Seonyu Park", "accuracy": 0.7430, "dice": 0.1086, "score": 0.5527 },
     { "team": "dukju kim", "accuracy": 0.7089, "dice": 0.1667, "score": 0.5463 },
     { "team": "Glee Lab", "accuracy": 0.7010, "dice": 0.1768, "score": 0.5438 },
     { "team": "MIL-X", "accuracy": 0.6836, "dice": 0.1908, "score": 0.5357 },
-    { "team": "MultimodalAI", "accuracy": 0.6477, "dice": 0.1975, "score": 0.5127 },
-    { "team": "Seonyu Park", "accuracy": 0.6425, "dice": 0.1172, "score": 0.4849 }
+    { "team": "MultimodalAI", "accuracy": 0.6477, "dice": 0.1975, "score": 0.5127 }
   ],
   "task2_external": [
     { "team": "Glee Lab", "score": 0.8703 },
