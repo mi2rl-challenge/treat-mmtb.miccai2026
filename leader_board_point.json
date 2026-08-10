@@ -221,6 +221,12 @@
       "score": 0.5827
     },
     {
+      "team": "Limitless",
+      "accuracy": 0.7885,
+      "dice": 0.0810,
+      "score": 0.5762
+    },
+    {
       "team": "FOCUS",
       "accuracy": 0.7386,
       "dice": 0.1568,
@@ -233,10 +239,10 @@
       "score": 0.5584
     },
     {
-      "team": "Limitless",
-      "accuracy": 0.7343,
-      "dice": 0.1198,
-      "score": 0.5499
+      "team": "dukju kim",
+      "accuracy": 0.7089,
+      "dice": 0.1667,
+      "score": 0.5463
     },
     {
       "team": "Glee Lab",
@@ -249,12 +255,6 @@
       "accuracy": 0.6836,
       "dice": 0.1908,
       "score": 0.5357
-    }
-    {
-      "team": "dukju kim",
-      "accuracy": 0.6774,
-      "dice": 0.1674,
-      "score": 0.5244
     },
     {
       "team": "MultimodalAI",
