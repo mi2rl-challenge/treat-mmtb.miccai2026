@@ -42,15 +42,15 @@
     { "team": "ECLAB", "score": 0.972, "external": 0.6537, "rank": 20 }
   ],
   "task1_external": [
+    { "team": "FOCUS", "accuracy": 0.7823, "dice": 0.1949, "score": 0.6061 },
     { "team": "Seonyu Park", "accuracy": 0.8164, "dice": 0.0603, "score": 0.5896 },
     { "team": "Limitless", "accuracy": 0.8051, "dice": 0.0695, "score": 0.5844 },
     { "team": "TBVisionAI", "accuracy": 0.8304, "dice": 0.0046, "score": 0.5827 },
-    { "team": "FOCUS", "accuracy": 0.7325, "dice": 0.1924, "score": 0.5705 },
     { "team": "dukju kim", "accuracy": 0.7316, "dice": 0.1617, "score": 0.5607 },
     { "team": "HealCoder", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 },
     { "team": "Glee Lab", "accuracy": 0.6914, "dice": 0.1776, "score": 0.5373 },
-    { "team": "MIL-X", "accuracy": 0.6512, "dice": 0.1970, "score": 0.5150 },
-    { "team": "MultimodalAI", "accuracy": 0.6477, "dice": 0.1975, "score": 0.5127 }
+    { "team": "MultimodalAI", "accuracy": 0.6477, "dice": 0.1975, "score": 0.5127 },
+    { "team": "MIL-X", "accuracy": 0.4921, "dice": 0.2288, "score": 0.4131 }
   ],
   "task2_external": [
     { "team": "Glee Lab", "score": 0.8706 },
@@ -58,7 +58,7 @@
     { "team": "황은찬", "score": 0.8383 },
     { "team": "Preceptor AI", "score": 0.8254 },
     { "team": "GenMI", "score": 0.8181 },
-    { "team": "TBVisionAI", "score": 0.8023 },
+    { "team": "TBVisionAI", "score": 0.8026 },
     { "team": "MultimodalAI", "score": 0.7982 },
     { "team": "Seonyu Park", "score": 0.7764 },
     { "team": "TBITers", "score": 0.7579 },
