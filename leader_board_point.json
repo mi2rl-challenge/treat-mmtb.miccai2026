@@ -53,11 +53,11 @@
     { "team": "dukju kim", "accuracy": 0.7089, "dice": 0.1860, "score": 0.5520 }
   ],
   "task2_external": [
-    { "team": "Glee Lab", "score": 0.8689 },
+    { "team": "Glee Lab", "score": 0.8714 },
     { "team": "GenMI", "score": 0.8563 },
+    { "team": "Preceptor AI", "score": 0.8549 },
     { "team": "Big Hero 2", "score": 0.8384 },
     { "team": "황은찬", "score": 0.8333 },
-    { "team": "Preceptor AI", "score": 0.8254 },
     { "team": "TBITers", "score": 0.8175 },
     { "team": "TBVisionAI", "score": 0.8026 },
     { "team": "MultimodalAI", "score": 0.7861 },
