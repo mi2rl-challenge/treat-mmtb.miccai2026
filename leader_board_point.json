@@ -54,8 +54,8 @@
   ],
   "task2_external": [
     { "team": "Glee Lab", "score": 0.8704 },
+    { "team": "Preceptor AI", "score": 0.8606 },
     { "team": "GenMI", "score": 0.8563 },
-    { "team": "Preceptor AI", "score": 0.8549 },
     { "team": "Big Hero 2", "score": 0.8389 },
     { "team": "MultimodalAI", "score": 0.8358 },
     { "team": "황은찬", "score": 0.8333 },
