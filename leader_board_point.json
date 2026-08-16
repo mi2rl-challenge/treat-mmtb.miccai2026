@@ -50,7 +50,7 @@
     { "team": "TBVisionAI", "accuracy": 0.7893, "dice": 0.0469, "score": 0.5666 },
     { "team": "MIL-X", "accuracy": 0.7570, "dice": 0.1174, "score": 0.5651 },
     { "team": "HealCoder", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 },
-    { "team": "dukju kim", "accuracy": 0.6906, "dice": 0.1979, "score": 0.5428 }
+    { "team": "dukju kim", "accuracy": 0.6670, "dice": 0.2087, "score": 0.5295 }
   ],
   "task2_external": [
     { "team": "Glee Lab", "score": 0.8704 },
