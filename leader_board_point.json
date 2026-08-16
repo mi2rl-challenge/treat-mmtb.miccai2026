@@ -53,7 +53,7 @@
     { "team": "dukju kim", "accuracy": 0.6670, "dice": 0.2087, "score": 0.5295 }
   ],
   "task2_external": [
-    { "team": "Glee Lab", "score": 0.8704 },
+    { "team": "Glee Lab", "score": 0.8727 },
     { "team": "Preceptor AI", "score": 0.8606 },
     { "team": "GenMI", "score": 0.8563 },
     { "team": "MultimodalAI", "score": 0.8528 },
