@@ -42,7 +42,7 @@
     { "team": "ECLAB", "score": 0.972, "external": 0.6537, "rank": 20 }
   ],
   "task1_external": [
-    { "team": "Limitless", "accuracy": 0.8243, "dice": 0.1189, "score": 0.6127 },
+    { "team": "Limitless", "accuracy": 0.8243, "dice": 0.1222, "score": 0.6137 },
     { "team": "FOCUS", "accuracy": 0.7823, "dice": 0.1949, "score": 0.6061 },
     { "team": "Glee Lab", "accuracy": 0.7832, "dice": 0.1563, "score": 0.5951 },
     { "team": "Seonyu Park", "accuracy": 0.7885, "dice": 0.0957, "score": 0.5806 },
