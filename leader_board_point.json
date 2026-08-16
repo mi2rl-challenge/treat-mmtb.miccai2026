@@ -58,10 +58,10 @@
     { "team": "Preceptor AI", "score": 0.8549 },
     { "team": "MultimodalAI", "score": 0.8358 },
     { "team": "황은찬", "score": 0.8333 },
-    { "team": "TBITers", "score": 0.8166 },
+    { "team": "TBITers", "score": 0.8223 },
+    { "team": "Big Hero 2", "score": 0.8063 },
     { "team": "TBVisionAI", "score": 0.7940 },
     { "team": "Seonyu Park", "score": 0.7777 },
-    { "team": "HealCoder", "score": 0.7457 },
-    { "team": "Big Hero 2", "score": 0.7048 }
+    { "team": "HealCoder", "score": 0.7457 }
   ]
 }
