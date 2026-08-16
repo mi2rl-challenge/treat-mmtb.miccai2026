@@ -44,7 +44,7 @@
   "task1_external": [
     { "team": "Limitless", "accuracy": 0.8243, "dice": 0.1222, "score": 0.6137 },
     { "team": "FOCUS", "accuracy": 0.7823, "dice": 0.1949, "score": 0.6061 },
-    { "team": "Glee Lab", "accuracy": 0.7832, "dice": 0.1563, "score": 0.5951 },
+    { "team": "Glee Lab", "accuracy": 0.7893, "dice": 0.1446, "score": 0.5959 },
     { "team": "Seonyu Park", "accuracy": 0.7885, "dice": 0.0957, "score": 0.5806 },
     { "team": "MultimodalAI", "accuracy": 0.7587, "dice": 0.1419, "score": 0.5737 },
     { "team": "TBVisionAI", "accuracy": 0.7893, "dice": 0.0469, "score": 0.5666 },
