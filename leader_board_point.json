@@ -44,7 +44,7 @@
   "task1_external": [
     { "team": "Limitless", "accuracy": 0.8243, "dice": 0.1222, "score": 0.6137 },
     { "team": "FOCUS", "accuracy": 0.7841, "dice": 0.1913, "score": 0.6063 },
-    { "team": "Glee Lab", "accuracy": 0.8077, "dice": 0.0997, "score": 0.5953 },
+    { "team": "Glee Lab", "accuracy": 0.7831, "dice": 0.1539, "score": 0.5944 },
     { "team": "Seonyu Park", "accuracy": 0.8164, "dice": 0.0737, "score": 0.5936 },
     { "team": "MIL-X", "accuracy": 0.7614, "dice": 0.1646, "score": 0.5823 },
     { "team": "MultimodalAI", "accuracy": 0.7622, "dice": 0.1614, "score": 0.5820 },
@@ -55,10 +55,10 @@
   "task2_external": [
     { "team": "Glee Lab", "score": 0.8695 },
     { "team": "Preceptor AI", "score": 0.8606 },
-    { "team": "Big Hero 2", "score": 0.8597 },
     { "team": "GenMI", "score": 0.8563 },
     { "team": "MultimodalAI", "score": 0.8560 },
     { "team": "TBITers", "score": 0.8361 },
+    { "team": "Big Hero 2", "score": 0.8353 },
     { "team": "황은찬", "score": 0.8333 },
     { "team": "TBVisionAI", "score": 0.7940 },
     { "team": "Seonyu Park", "score": 0.7777 },
