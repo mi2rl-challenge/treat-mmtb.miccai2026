@@ -54,14 +54,14 @@
   ],
   "task2_external": [
     { "team": "Glee Lab", "score": 0.8695 },
+    { "team": "MultimodalAI", "score": 0.8642 },
     { "team": "Preceptor AI", "score": 0.8606 },
-    { "team": "GenMI", "score": 0.8563 },
-    { "team": "MultimodalAI", "score": 0.8560 },
+    { "team": "GenMI", "score": 0.8369 },
     { "team": "TBITers", "score": 0.8361 },
     { "team": "Big Hero 2", "score": 0.8353 },
     { "team": "황은찬", "score": 0.8333 },
     { "team": "TBVisionAI", "score": 0.7940 },
-    { "team": "Seonyu Park", "score": 0.7777 },
+    { "team": "Seonyu Park", "score": 0.7390 },
     { "team": "HealCoder", "score": 0.7457 }
   ]
 }
