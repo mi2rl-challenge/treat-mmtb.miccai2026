@@ -48,9 +48,9 @@
     { "team": "Glee Lab", "accuracy": 0.7831, "dice": 0.1539, "score": 0.5944 },
     { "team": "TBVisionAI", "accuracy": 0.8226, "dice": 0.0581, "score": 0.5932 },
     { "team": "FOCUS", "accuracy": 0.7622, "dice": 0.1913, "score": 0.5910 },
+    { "team": "dukju kim", "accuracy": 0.7631, "dice": 0.1653, "score": 0.5838 },
     { "team": "MIL-X", "accuracy": 0.7378, "dice": 0.1514, "score": 0.5619 },
-    { "team": "HealCoder", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 },
-    { "team": "dukju kim", "accuracy": 0.6670, "dice": 0.2123, "score": 0.5306 }
+    { "team": "HealCoder", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 }
   ],
   "task2_external": [
     { "team": "Glee Lab", "score": 0.8727 },
