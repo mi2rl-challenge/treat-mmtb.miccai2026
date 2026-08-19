@@ -42,18 +42,18 @@
     { "team": "ECLAB", "score": 0.972, "external": 0.6537, "rank": 20 }
   ],
   "task1_external": [
-    { "team": "Limitless", "accuracy": 0.8243, "dice": 0.1222, "score": 0.6137 },
+    { "team": "Limitless_FINAL", "accuracy": 0.8243, "dice": 0.1222, "score": 0.6137 },
     { "team": "Seonyu Park_FINAL", "accuracy": 0.8164, "dice": 0.1176, "score": 0.6068 },
     { "team": "MultimodalAI_FINAL", "accuracy": 0.8112, "dice": 0.1077, "score": 0.6001 },
     { "team": "Glee Lab", "accuracy": 0.7911, "dice": 0.1374, "score": 0.5950 },
-    { "team": "TBVisionAI", "accuracy": 0.8226, "dice": 0.0581, "score": 0.5932 },
+    { "team": "TBVisionAI_FINAL", "accuracy": 0.8147, "dice": 0.0810, "score": 0.5946 },
     { "team": "FOCUS", "accuracy": 0.7622, "dice": 0.1913, "score": 0.5910 },
     { "team": "dukju kim_FINAL", "accuracy": 0.7631, "dice": 0.1653, "score": 0.5838 },
     { "team": "MIL-X", "accuracy": 0.7378, "dice": 0.1514, "score": 0.5619 },
-    { "team": "HealCoder", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 }
+    { "team": "HealCoder_FINAL", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 }
   ],
   "task2_external": [
-    { "team": "Glee Lab", "score": 0.8727 },
+    { "team": "Glee Lab_FINAL", "score": 0.8727 },
     { "team": "MultimodalAI_FINAL", "score": 0.8642 },
     { "team": "Preceptor AI", "score": 0.8606 },
     { "team": "Big Hero 2_FINAL", "score": 0.8549 },
@@ -62,6 +62,6 @@
     { "team": "황은찬", "score": 0.8333 },
     { "team": "TBVisionAI", "score": 0.7940 },
     { "team": "Seonyu Park_FINAL", "score": 0.7390 },
-    { "team": "HealCoder", "score": 0.7457 }
+    { "team": "HealCoder_FINAL", "score": 0.7457 }
   ]
 }
