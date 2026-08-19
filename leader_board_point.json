@@ -45,7 +45,7 @@
     { "team": "Limitless", "accuracy": 0.8243, "dice": 0.1222, "score": 0.6137 },
     { "team": "Seonyu Park", "accuracy": 0.8164, "dice": 0.1176, "score": 0.6068 },
     { "team": "MultimodalAI", "accuracy": 0.8112, "dice": 0.1130, "score": 0.6017 },
-    { "team": "Glee Lab", "accuracy": 0.7831, "dice": 0.1539, "score": 0.5944 },
+    { "team": "Glee Lab", "accuracy": 0.7911, "dice": 0.1374, "score": 0.5950 },
     { "team": "TBVisionAI", "accuracy": 0.8226, "dice": 0.0581, "score": 0.5932 },
     { "team": "FOCUS", "accuracy": 0.7622, "dice": 0.1913, "score": 0.5910 },
     { "team": "dukju kim", "accuracy": 0.7631, "dice": 0.1653, "score": 0.5838 },
