@@ -55,13 +55,13 @@
   "task2_external": [
     { "team": "Glee Lab_FINAL", "score": 0.8727 },
     { "team": "MultimodalAI_FINAL", "score": 0.8642 },
-    { "team": "Preceptor AI", "score": 0.8606 },
+    { "team": "Preceptor AI_FINAL", "score": 0.8606 },
     { "team": "Big Hero 2_FINAL", "score": 0.8549 },
     { "team": "GenMI_FINAL", "score": 0.8375 },
     { "team": "TBITers", "score": 0.8373 },
-    { "team": "황은찬", "score": 0.8333 },
-    { "team": "TBVisionAI", "score": 0.7940 },
+    { "team": "TBVisionAI_FINAL", "score": 0.7940 },
     { "team": "Seonyu Park_FINAL", "score": 0.7390 },
-    { "team": "HealCoder_FINAL", "score": 0.7457 }
+    { "team": "HealCoder_FINAL", "score": 0.7457 },
+    { "team": "황은찬_FINAL", "score": 0.7291 }
   ]
 }
