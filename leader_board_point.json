@@ -45,12 +45,12 @@
     { "team": "Limitless_FINAL", "accuracy": 0.8243, "dice": 0.1222, "score": 0.6137 },
     { "team": "Seonyu Park_FINAL", "accuracy": 0.8164, "dice": 0.1176, "score": 0.6068 },
     { "team": "MultimodalAI_FINAL", "accuracy": 0.8112, "dice": 0.1077, "score": 0.6001 },
-    { "team": "Glee Lab", "accuracy": 0.7911, "dice": 0.1374, "score": 0.5950 },
     { "team": "TBVisionAI_FINAL", "accuracy": 0.8147, "dice": 0.0810, "score": 0.5946 },
-    { "team": "FOCUS", "accuracy": 0.7622, "dice": 0.1913, "score": 0.5910 },
+    { "team": "Glee Lab_FINAL", "accuracy": 0.7797, "dice": 0.1504, "score": 0.5909 },
     { "team": "dukju kim_FINAL", "accuracy": 0.7631, "dice": 0.1653, "score": 0.5838 },
     { "team": "MIL-X_FINAL", "accuracy": 0.7666, "dice": 0.1002, "score": 0.5667 },
-    { "team": "HealCoder_FINAL", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 }
+    { "team": "HealCoder_FINAL", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 },
+    { "team": "FOCUS_FINAL", "accuracy": 0.7080, "dice": 0.1913, "score": 0.5530 },
   ],
   "task2_external": [
     { "team": "Glee Lab_FINAL", "score": 0.8727 },
