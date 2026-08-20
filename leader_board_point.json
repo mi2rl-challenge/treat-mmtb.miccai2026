@@ -49,7 +49,7 @@
     { "team": "TBVisionAI_FINAL", "accuracy": 0.8147, "dice": 0.0810, "score": 0.5946 },
     { "team": "FOCUS", "accuracy": 0.7622, "dice": 0.1913, "score": 0.5910 },
     { "team": "dukju kim_FINAL", "accuracy": 0.7631, "dice": 0.1653, "score": 0.5838 },
-    { "team": "MIL-X", "accuracy": 0.7378, "dice": 0.1514, "score": 0.5619 },
+    { "team": "MIL-X_FINAL", "accuracy": 0.7666, "dice": 0.1002, "score": 0.5667 },
     { "team": "HealCoder_FINAL", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 }
   ],
   "task2_external": [
