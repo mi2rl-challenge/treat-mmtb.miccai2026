@@ -50,7 +50,7 @@
     { "team": "dukju kim_FINAL", "accuracy": 0.7631, "dice": 0.1653, "score": 0.5838 },
     { "team": "MIL-X_FINAL", "accuracy": 0.7666, "dice": 0.1002, "score": 0.5667 },
     { "team": "HealCoder_FINAL", "accuracy": 0.7395, "dice": 0.1400, "score": 0.5597 },
-    { "team": "FOCUS_FINAL", "accuracy": 0.7080, "dice": 0.1913, "score": 0.5530 },
+    { "team": "FOCUS_FINAL", "accuracy": 0.7080, "dice": 0.1913, "score": 0.5530 }
   ],
   "task2_external": [
     { "team": "Glee Lab_FINAL", "score": 0.8727 },
